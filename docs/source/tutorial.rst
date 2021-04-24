@@ -5,6 +5,7 @@
 
 Rolling the Dice
 ----------------
+
 Once ``PyDiceroll.py`` is installed and your code is able to import the module, its ``roll()`` function can be
 used right away. This function returns an integer, by the way. So it can be used as any other integer would
 be used. But first, we must give this function a value to work from.
@@ -40,11 +41,11 @@ Notice that the inputted string values can be upper or lower case.
 
 The dice types to roll are:
 
-   D3, D4, D6, D8, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
+   **D3, D4, D6, D8, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX,** and **BADFLUX**
 
 Additional dice types available are:
 
-   BOON, BANE, and D2
+   **BOON, BANE, and D2**
 
 .. note::
 
@@ -87,12 +88,12 @@ A TEST roll that calculates percentages for 2D6 can be issued:
 
 The roll will return a list of percentages for 2-12 rolled.
 
-D09 rolls will generate a range of 0 - 9.
+**D09** rolls will generate a range of **0 - 9**.
 
-D99 rolls will generate a range of 0 - 99.
+**D99** rolls will generate a range of **0 - 99**.
 
-D2 rolls will generate a range of 0 - 1.
+**D2** rolls will generate a range of **0 - 1**.
 
-The 4dF roll type for FATE area available as well.
+The **4dF** roll type for FATE is available as well.
 
-1D thru 10D rolls for Traveller5 can be performed with DM support.
+**1D** thru **10D** rolls for Traveller5 can be performed with DM support.
