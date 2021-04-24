@@ -30,7 +30,7 @@ Warning
 
 **PyDiceroll** will not work with **Python 2.7-**.
 
-Contacts
+Contact
 -------
 Questions? Please contact shawndriscoll@hotmail.com
 
