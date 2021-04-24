@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; PyDiceroll 3.2 Operations Manual</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What’s New with PyDiceroll 3.2?" href="what_is_new.html" />
+    <link rel="prev" title="PyDiceroll 3.2 Overview" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDiceroll 3.2 Operations Manual</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="PyDiceroll 3.2 Overview"
+             accesskey="P">previous</a> |
+          <a href="what_is_new.html" title="What’s New with PyDiceroll 3.2?"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction">
+<h1><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h2>
+<p>Back during the release of <strong>diceroll 2.2</strong>, I wanted to learn something new in regards to Python. Even though I was using 2.5.4,
+there was still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those <em>need to know only</em> things about Python. Some things I’d get around to
+learning only when I had to, but only if it was part of something else that I had taken an interest in doing.</p>
+<p>So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinja. They were both something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.</p>
+<p>In a nutshell,
+Sphinx is an EXE (generated during its install from a pip command, which is still magic to me, that <em>it just runs</em> in
+Python 3.9+) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their <code class="docutils literal notranslate"><span class="pre">.__doc__</span></code> strings, I knew I just had to spend a couple days learning how all that stuff happens.</p>
+<p>So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
+worth their going into.</p>
+<p>-Shawn</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="_images/requirements.png" src="_images/requirements.png" />
+</div>
+<ul>
+<li><p><strong>Microsoft Windows</strong></p>
+<blockquote>
+<div><p><strong>PyDiceroll</strong> has been tested on Windows versions: 10.
+It has not been tested on MacOS or Linux.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Python 3.9+</strong></p>
+<blockquote>
+<div><p><strong>PyDiceroll</strong> was written using the C implementation of Python
+version 3.9.4. Also known as CPython. With some doing, this
+module could of course be re-written for Jython, PyPy, or
+IronPython.</p>
+<p>Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
+running this module. One of the easiest to use is Microsoft Visual Studio Code.</p>
+</div></blockquote>
+</li>
+<li><p><strong>colorama 0.4.4</strong></p>
+<blockquote>
+<div><p>Because CMD may have some colored text messages for debugging. The colorama
+code can be removed if it is not needed, however. To install, just type <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">colorama</span></code> at the CMD prompt.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Your Game</strong></p>
+<blockquote>
+<div><p><strong>PyDiceroll</strong> can be used as a standalone program. But where it shines though is when it’s imported into a game of yours.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>PyDiceroll 3.2</strong> will not work with <strong>Python 2.7-</strong>.</p>
+</div>
+</div>
+<div class="section" id="installing-locally-to-your-folder">
+<h2>Installing Locally to Your Folder<a class="headerlink" href="#installing-locally-to-your-folder" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="_images/python_file.png" src="_images/python_file.png" />
+</div>
+<p>Installing <strong>PyDiceroll 3.2</strong> is as easy as always. Just copy <code class="docutils literal notranslate"><span class="pre">PyDiceroll.py</span></code> into the same folder
+your code happens to be in.</p>
+<p>Then add this line at (or near) the top of your code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyDiceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-as-a-package">
+<h2>Installing as a Package<a class="headerlink" href="#installing-as-a-package" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="_images/python_package.png" src="_images/python_package.png" />
+</div>
+<p>If your code setup is different, in that you like to keep your function modules in a folder separate
+from your main code, you could copy <code class="docutils literal notranslate"><span class="pre">PyDiceroll.py</span></code> into that folder.</p>
+<p>Say you have a folder called <code class="docutils literal notranslate"><span class="pre">game_utils</span></code>, and assuming you have an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> inside it, just copy <code class="docutils literal notranslate"><span class="pre">PyDiceroll.py</span></code>
+into your <code class="docutils literal notranslate"><span class="pre">game_utils</span></code> folder and add this line near the top of your code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">game_utils.PyDiceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+</pre></div>
+</div>
+<p>Some ways to see if the <code class="docutils literal notranslate"><span class="pre">PyDiceroll</span></code> module was installed correctly is by typing:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">))</span>
+<span class="go">(&#39;3.2&#39;, &#39;roll(), release version 3.2.0b for Python 3.9.4&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="go">    The dice types to roll are:</span>
+<span class="go">        &#39;4dF&#39;, &#39;D2&#39;, &#39;D3&#39;, &#39;D4&#39;, &#39;D6&#39;, &#39;D8&#39;, &#39;D09&#39;, &#39;D10&#39;,</span>
+<span class="go">        &#39;D12&#39;, &#39;D20&#39;, &#39;D30&#39;, &#39;D099&#39;, &#39;D100&#39;, &#39;D66&#39;, &#39;DD&#39;,</span>
+<span class="go">        &#39;FLUX&#39;, &#39;GOODFLUX&#39;, &#39;BADFLUX&#39;, &#39;BOON&#39;, &#39;BANE&#39;,</span>
+<span class="go">        and also Traveller5&#39;s 1D thru 10D rolls</span>
+<span class="go">    Some examples are:</span>
+<span class="go">    roll(&#39;D6&#39;) or roll(&#39;1D6&#39;) -- roll one 6-sided die</span>
+<span class="go">    roll(&#39;2D6&#39;) -- roll two 6-sided dice</span>
+<span class="go">    roll(&#39;D09&#39;) -- roll a 10-sided die (0 - 9)</span>
+<span class="go">    roll(&#39;D10&#39;) -- roll a 10-sided die (1 - 10)</span>
+<span class="go">    roll(&#39;D099&#39;) -- roll a 100-sided die (0 - 99)</span>
+<span class="go">    roll(&#39;D100&#39;) -- roll a 100-sided die (1 - 100)</span>
+<span class="go">    roll(&#39;D66&#39;) -- roll for a D66 chart</span>
+<span class="go">    roll(&#39;FLUX&#39;) -- a FLUX roll (-5 to 5)</span>
+<span class="go">    roll(&#39;3D6+6&#39;) -- add +6 DM to roll</span>
+<span class="go">    roll(&#39;4D4-4&#39;) -- add -4 DM to roll</span>
+<span class="go">    roll(&#39;2DD+3&#39;) -- roll (2D6+3) x 10</span>
+<span class="go">    roll(&#39;BOON&#39;) -- roll 3D6 and keep the higher two dice</span>
+<span class="go">    roll(&#39;4D&#39;) -- make a Traveller5 4D roll</span>
+<span class="go">    roll(&#39;4dF&#39;) -- make a FATE roll</span>
+<span class="go">    roll(&#39;info&#39;) -- release version of program</span>
+<span class="go">    An invalid roll will return a 0.</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Introduction</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preface">Preface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-locally-to-your-folder">Installing Locally to Your Folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-as-a-package">Installing as a Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.2?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="PyDiceroll 3.2 Overview"
+              >previous</a> |
+            <a href="what_is_new.html" title="What’s New with PyDiceroll 3.2?"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, SHONNER CORP.
+      Last updated on Apr 24, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

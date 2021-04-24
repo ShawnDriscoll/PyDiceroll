@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using roll() in Your Own Code &#8212; PyDiceroll 3.2 Operations Manual</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Debugging PyDiceroll" href="debugging.html" />
+    <link rel="prev" title="PyDiceroll Tutorial" href="tutorial.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDiceroll 3.2 Operations Manual</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="tutorial.html" title="PyDiceroll Tutorial"
+             accesskey="P">previous</a> |
+          <a href="debugging.html" title="Debugging PyDiceroll"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-roll-in-your-own-code">
+<h1><strong>Using roll() in Your Own Code</strong><a class="headerlink" href="#using-roll-in-your-own-code" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
+<img alt="_images/python_screen.png" src="_images/python_screen.png" />
+</div>
+<div class="section" id="for-simple-die-rolls">
+<h2>For Simple Die Rolls<a class="headerlink" href="#for-simple-die-rolls" title="Permalink to this headline">¶</a></h2>
+<p>Sample Outputting of Die Rolls:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the roll() module</span>
+<span class="kn">from</span> <span class="nn">PyDiceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+
+<span class="c1"># enter the roll type to be made</span>
+<span class="n">number_of_dice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Number of dice to roll? &#39;</span><span class="p">)</span>
+<span class="n">dice_type</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Dice type? &#39;</span><span class="p">)</span>
+<span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;DM? &#39;</span><span class="p">)</span>
+
+<span class="c1"># make sure that there is a plus or minus sign in the DM string</span>
+<span class="k">if</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;-&#39;</span> <span class="ow">and</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+    <span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
+
+<span class="c1"># concatenate the values for the dice string</span>
+<span class="n">dice</span> <span class="o">=</span> <span class="n">number_of_dice</span> <span class="o">+</span> <span class="n">dice_type</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rolling&#39;</span><span class="p">,</span> <span class="n">dice</span><span class="p">)</span>
+
+<span class="c1"># do 20 rolls</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You rolled a </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-probabilites">
+<h2>For Probabilites<a class="headerlink" href="#for-probabilites" title="Permalink to this headline">¶</a></h2>
+<p>Sample Task Resolution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the roll() module</span>
+<span class="kn">from</span> <span class="nn">PyDiceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+
+<span class="c1"># Enter your character&#39;s chances to succeed at a task</span>
+<span class="n">skilled</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Is your character trained for the task ([y]/n)? &#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">skilled</span> <span class="o">==</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
+    <span class="n">die_mod</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter your character&#39;s skill level&quot;</span><span class="p">)</span>
+    <span class="n">die_mod</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(0 to 4)? &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter the difficulty of the task&#39;</span><span class="p">)</span>
+<span class="n">difficulty</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(Impossible: -6 to Easy: +6)? &#39;</span><span class="p">))</span>
+
+<span class="c1"># The player must roll an 8 or higher for their character to succeed</span>
+<span class="n">dice_roll</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">die_mod</span> <span class="o">+</span> <span class="n">difficulty</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You rolled:&#39;</span><span class="p">,</span> <span class="n">dice_roll</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">dice_roll</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character succeeds with the task.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character saved everyone.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character fails at the task.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character becomes injured.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">6</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character died from injuries!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-repairing-game-code">
+<h2>For Repairing Game Code<a class="headerlink" href="#for-repairing-game-code" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="_images/broken_die.png" src="_images/broken_die.png" />
+</div>
+<p>Often times, game code will be downloaded or found that contains
+incorrect <code class="docutils literal notranslate"><span class="pre">randint()</span></code> calls for rolling two 6-sided dice. A line such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">world_size</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Easily becomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">world_size</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2d6&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="encountering-errors">
+<h2>Encountering Errors<a class="headerlink" href="#encountering-errors" title="Permalink to this headline">¶</a></h2>
+<p>Entering an invalid string for <code class="docutils literal notranslate"><span class="pre">roll()</span></code> will return an error message, as well as a value of 0 from the function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;3d1&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>** DICE ERROR! ‘3D1’ is unknown **</p>
+<div class="line-block">
+<div class="line">0</div>
+</div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.2?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Using roll() in Your Own Code</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#for-simple-die-rolls">For Simple Die Rolls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-probabilites">For Probabilites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-repairing-game-code">For Repairing Game Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#encountering-errors">Encountering Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="tutorial.html" title="PyDiceroll Tutorial"
+              >previous</a> |
+            <a href="debugging.html" title="Debugging PyDiceroll"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, SHONNER CORP.
+      Last updated on Apr 24, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

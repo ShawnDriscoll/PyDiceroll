@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer’s Notes &#8212; PyDiceroll 3.2 Operations Manual</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PyDiceroll Module" href="pydiceroll.html" />
+    <link rel="prev" title="Software Titles That Use PyDiceroll" href="software_titles.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDiceroll 3.2 Operations Manual</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="software_titles.html" title="Software Titles That Use PyDiceroll"
+             accesskey="P">previous</a> |
+          <a href="pydiceroll.html" title="PyDiceroll Module"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="designer-s-notes">
+<h1><strong>Designer’s Notes</strong><a class="headerlink" href="#designer-s-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="in-the-beginning">
+<h2>In the Beginning<a class="headerlink" href="#in-the-beginning" title="Permalink to this headline">¶</a></h2>
+<p>One of the first things I do when learning a new language is to
+discovery how it generates random numbers. Older computer languages
+from the ’70s had their own built-in random number generators. Technically,
+they were pseudo-random number generators. But technically, I wanted to
+program my Star Trek games anyway no matter what they were called.</p>
+<p>In the ’80s, I would discover that not all computer languages came
+with random number generators built in. Many didn’t have such a thing
+unless some external software library was installed. Both FORTRAN and C
+couldn’t do random anything out of the box. A math library had to be picked from
+the many that were out there. And if none were available, a computer class on campus
+was available to teach you how to program your own random number generator from scratch.</p>
+<p>By the ’90s, random number generators were pretty much standardized as
+for as how accurately random they were. And they were included in standard
+libraries for various languages. By the time Python was being developed, the
+C language used to write Python had very robust random number generators.
+And because Python was written in C, it just made sense for it to make
+use of C libraries.</p>
+<p>For those that are curious, <strong>PyDiceroll</strong> uses the <code class="docutils literal notranslate"><span class="pre">random.randint()</span></code> module that comes
+with CPython. There are stronger random generators out there now, with NumPy being one
+of them. But at the time of designing <strong>PyDiceroll</strong>, I didn’t quite understand how-all
+NumPy worked, or what version of it to install. And for rolling dice, the built-in
+random number generator would be just fine.</p>
+</div>
+<div class="section" id="lessons-learned">
+<h2>Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">¶</a></h2>
+<p>In the past, when I needed a random number from 1 to say 6 (see 6-sided dice), I would use <code class="docutils literal notranslate"><span class="pre">INT(RND(1)*6)</span> <span class="pre">+</span> <span class="pre">1</span></code>.
+And I would be used to doing it that way for probably 15 years or so, because that is
+how most BASIC languages did things. Other languages like C required me to whip out the
+80286 System Developer’s 3-ring binder to find out how <code class="docutils literal notranslate"><span class="pre">srand()</span></code> and <code class="docutils literal notranslate"><span class="pre">rand()</span></code> worked,
+and under what circumstances.</p>
+<p>Fast-forward 20 years, and I’m learning CPython without knowing the difference between a CPython
+or an RPython or any other Python out there. I figured Python was the same all over, even though
+I had a feeling Linux did things differently because of its filepath naming and OS commands. And
+of course, the first thing I had to try was Python’s <code class="docutils literal notranslate"><span class="pre">random</span></code> module, as well as its
+ugly-looking <code class="docutils literal notranslate"><span class="pre">randint()</span></code>.</p>
+<p>Right away I noticed the way Python “loaded” modules was going to be a learning experience. I
+hadn’t really programmed anything huge since my TANDY Color Computer 3 days running OS-9 Level II
+and programming in BASIC09 (<a class="reference external" href="https://en.wikipedia.org/wiki/BASIC09">https://en.wikipedia.org/wiki/BASIC09</a>). Python would reveal different
+ways of importing modules the more I read about them, and the more code I poured over.</p>
+<p>I would soon find that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1"># roll a 6-sided die</span>
+</pre></div>
+</div>
+<p>Was the same thing as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1"># roll a 6-sided die</span>
+</pre></div>
+</div>
+<p>Which looked a bit cleaner. But I was debating if I wanted to use <code class="docutils literal notranslate"><span class="pre">randint()</span></code> at all in
+my normal coding.</p>
+<p>So while I was learning how to write my own functions, as well as how to go about importing them, I came up with
+an idea for <strong>PyDiceroll</strong>. It would included a <code class="docutils literal notranslate"><span class="pre">roll()</span></code> function, and a <code class="docutils literal notranslate"><span class="pre">die_rolls()</span></code> function as
+a “side effect.” Even though <code class="docutils literal notranslate"><span class="pre">die_rolls()</span></code> had no error-checking, <code class="docutils literal notranslate"><span class="pre">roll()</span></code> would call it after
+doing its own error-checking.</p>
+<p>I was trying to avoid using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyDiceroll</span> <span class="kn">import</span> <span class="n">die_rolls</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">die_rolls</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="c1"># roll two 6-sided dice</span>
+</pre></div>
+</div>
+<p>For my dice rolls, I wanted something more readable. Something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyDiceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6&#39;</span><span class="p">))</span> <span class="c1"># roll two 6-sided dice</span>
+</pre></div>
+</div>
+<p>It was almost less typing, which I thought was great because I was going to be typing this function a lot
+for a Python project I had in mind. And it would be a lot easier to spot what kind of rolls were being made in my
+code. And the simple addition or subtraction of DMs to such a roll was making the function more appealing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6+3&#39;</span><span class="p">))</span> <span class="c1"># roll two 6-sided dice and add a DM of +3 to it</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-channel-1">
+<h2>The Channel 1<a class="headerlink" href="#the-channel-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>diceroll</strong> was written years ago. The Classic Python 2.5 code was used by both my TravCalc and TravGen apps, and got looked at
+by GitHub visitors who would google-by now and again. But not many programmers will ever use the code because of the simple fact
+that Python is now version 3.9+ something. So <strong>diceroll</strong>, along with a slew of other pre-Python 2.6 era modules,
+are the Channel 1 stations in the room that no TV can possibly watch.</p>
+<p>It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
+<em>“This is Python.”</em> Or say, <em>“This is what Python should be.”</em> Something like that. Well… Python 2.5.4 was my Python.</p>
+<p>I once said, <em>“I believe the next great computer programming language will be the one that remains true to its nature/design as
+it grows. And doesn’t split the party as it grows.”</em> I hung onto Python 2.5.4 for as long as possible. For a good fifteen years. Or I should
+say for a <em>great</em> fifteen years. Because they were great. But most great things come with an ending to them.</p>
+<p>And so it was, that yesterday I would uninstall Python 2.5.4 along with all its things. And today, I would begin the installation of
+Python 3.9.4. I guess one could say it was the terminated support for Python 2.x this year that nudged me, along with some of the
+older Python 3.x terminations as well. Even Python 3.9+ saw earlier Python 3’s as dead weight. Python 3’s that I didn’t want to deal with, such
+as 3.0, 3.1, 3.2, 3.3, 3.4, and 3.5. And now they are gone. And I can skip ahead to a refined version of Python 3 with no baggage
+from 2.6 or 2.7 whatsoever.</p>
+<div class="line-block">
+<div class="line"><em>Shawn Driscoll</em></div>
+<div class="line"><em>April 23rd, 2021</em></div>
+<div class="line"><em>US, California</em></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.2?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Designer’s Notes</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#in-the-beginning">In the Beginning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lessons-learned">Lessons Learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-channel-1">The Channel 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="software_titles.html" title="Software Titles That Use PyDiceroll"
+              >previous</a> |
+            <a href="pydiceroll.html" title="PyDiceroll Module"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, SHONNER CORP.
+      Last updated on Apr 24, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

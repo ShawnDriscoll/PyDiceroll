@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging PyDiceroll &#8212; PyDiceroll 3.2 Operations Manual</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Alternate PyDiceroll Distributions" href="alternate_distributions.html" />
+    <link rel="prev" title="Using roll() in Your Own Code" href="samples.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDiceroll 3.2 Operations Manual</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="samples.html" title="Using roll() in Your Own Code"
+             accesskey="P">previous</a> |
+          <a href="alternate_distributions.html" title="Alternate PyDiceroll Distributions"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="debugging-pydiceroll">
+<h1><strong>Debugging PyDiceroll</strong><a class="headerlink" href="#debugging-pydiceroll" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
+<img alt="_images/fake_die.png" src="_images/fake_die.png" />
+</div>
+<p><strong>PyDiceroll 3.2</strong> keeps a log file of any dice rolls made during its last run. You will find <code class="docutils literal notranslate"><span class="pre">PyDiceroll.log</span></code> in the <code class="docutils literal notranslate"><span class="pre">Logs</span></code>
+folder it creates if one isn’t there already. In the file you will see mentions of dice being rolled. <strong>PyDiceroll</strong> uses
+a default logging mode of <code class="docutils literal notranslate"><span class="pre">INFO</span></code> which isn’t that verbose.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PyDiceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Your INFO logging will output as:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">…INFO PyDiceroll - Logging started.</div>
+<div class="line">…INFO PyDiceroll - roll() v3.2 started, and running…</div>
+<div class="line">…INFO PyDiceroll - 3D4 = 3D4+0 = 10</div>
+</div>
+</div></blockquote>
+<p>Changing <strong>PyDiceroll’s</strong> logging mode to <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> will record debugging messages in the <code class="docutils literal notranslate"><span class="pre">Logs\PyDiceroll.log</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PyDiceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Your DEBUG logging will output as:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">…INFO PyDiceroll - Logging started.</div>
+<div class="line">…INFO PyDiceroll - roll() v3.2 started, and running…</div>
+<div class="line">…DEBUG PyDiceroll - Asked to roll 3D4:</div>
+<div class="line">…DEBUG PyDiceroll - Using three 4-sided dice…</div>
+<div class="line">…DEBUG PyDiceroll - Rolled a 4</div>
+<div class="line">…DEBUG PyDiceroll - Rolled a 2</div>
+<div class="line">…DEBUG PyDiceroll - Rolled a 2</div>
+<div class="line">…INFO PyDiceroll - 3D4 = 3D4+0 = 8</div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Running <strong>PyDiceroll</strong> in <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> mode may create a log file that will be too huge to open. A program of yours
+left running for a long period of time could create millions of lines of recorded log entries. Fortunately, <code class="docutils literal notranslate"><span class="pre">PyDiceroll.log</span></code> is
+reset each time your program is run. Also, any errors encountered will be recorded as <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> in the log file, no
+matter which logging mode you’ve chosen to use.</p>
+</div>
+<p>If your own code has logging enabled for it, be sure to let <strong>PyDiceroll</strong> know by changing <code class="docutils literal notranslate"><span class="pre">your_code_name_here</span></code> to
+the name of the program you’re calling <code class="docutils literal notranslate"><span class="pre">roll()</span></code> from.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;your_code_name_here.PyDiceroll&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.2?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="samples.html" title="Using roll() in Your Own Code"
+              >previous</a> |
+            <a href="alternate_distributions.html" title="Alternate PyDiceroll Distributions"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, SHONNER CORP.
+      Last updated on Apr 24, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

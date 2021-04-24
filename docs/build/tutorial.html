@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyDiceroll Tutorial &#8212; PyDiceroll 3.2 Operations Manual</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using roll() in Your Own Code" href="samples.html" />
+    <link rel="prev" title="What’s New with PyDiceroll 3.2?" href="what_is_new.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDiceroll 3.2 Operations Manual</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="what_is_new.html" title="What’s New with PyDiceroll 3.2?"
+             accesskey="P">previous</a> |
+          <a href="samples.html" title="Using roll() in Your Own Code"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydiceroll-tutorial">
+<h1><strong>PyDiceroll Tutorial</strong><a class="headerlink" href="#pydiceroll-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
+<img alt="_images/dice_tut.png" src="_images/dice_tut.png" />
+</div>
+<div class="section" id="rolling-the-dice">
+<h2>Rolling the Dice<a class="headerlink" href="#rolling-the-dice" title="Permalink to this headline">¶</a></h2>
+<p>Once <code class="docutils literal notranslate"><span class="pre">PyDiceroll.py</span></code> is installed and your code is able to import the module, its <code class="docutils literal notranslate"><span class="pre">roll()</span></code> function can be
+used right away. This function returns an integer, by the way. So it can be used as any other integer would
+be used. But first, we must give this function a value to work from.</p>
+<dl class="py function">
+<dt id="roll">
+<code class="sig-name descname"><span class="pre">roll</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#roll" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><em>dice</em> = a string of three ordered concatenated values:</div>
+<div class="line"><br /></div>
+<div class="line"><em>number_of_dice</em> + <em>dice_type</em> + <em>dice_roll_modifier</em></div>
+<div class="line"><br /></div>
+<div class="line">As examples:</div>
+<div class="line"><em>dice</em> = ‘2’ + ‘D10’ + ‘-2’</div>
+<div class="line"><em>dice</em> = str(3) + ‘D6’ + ‘+2’</div>
+<div class="line"><em>dice</em> = ‘FLUX’</div>
+<div class="line"><br /></div>
+<div class="line"><em>dice_roll_modifier</em> must include a ‘+’ or ‘-‘ with its value.</div>
+<div class="line"><br /></div>
+<div class="line">Note that both <em>number_of_dice</em> and <em>dice_roll_modifier</em> are optional, and may not even be</div>
+<div class="line">used by some <em>dice_type</em> rolls.</div>
+</div>
+</dd></dl>
+
+<p>Those of you that have used dice rolling programs before will notice that something is different. And that is,
+<code class="docutils literal notranslate"><span class="pre">roll()</span></code> uses a string for its input:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">die1</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;1D6&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">die2</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;1d6&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dice</span> <span class="o">=</span> <span class="s1">&#39;3D4+1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">))</span>
+<span class="go">3, 6, 9</span>
+</pre></div>
+</div>
+<p>The return values from <code class="docutils literal notranslate"><span class="pre">roll()</span></code> are always integer.</p>
+<p>Notice that the inputted string values can be upper or lower case.</p>
+<p>The dice types to roll are:</p>
+<blockquote>
+<div><p>D3, D4, D6, D8, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</p>
+</div></blockquote>
+<p>Additional dice types available are:</p>
+<blockquote>
+<div><p>BOON, BANE, and D2</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
+covered by <strong>PyDiceroll</strong>. However, more are planned for in future releases.</p>
+</div>
+<p><strong>PyDiceroll</strong> uses a simple standard when it comes to rolling various dice types.</p>
+<p>Some examples are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D6&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;1D6&#39;</span><span class="p">)</span> <span class="c1"># roll one 6-sided die</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6&#39;</span><span class="p">)</span> <span class="c1"># roll two 6-sided dice</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D09&#39;</span><span class="p">)</span> <span class="c1"># roll a 10-sided die (0 - 9)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D10&#39;</span><span class="p">)</span> <span class="c1"># roll a 10-sided die (1 - 10)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D099&#39;</span><span class="p">)</span> <span class="c1"># roll a 100-sided die (0 - 99)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D100&#39;</span><span class="p">)</span> <span class="c1"># roll a 100-sided die (1 - 100)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;D66&#39;</span><span class="p">)</span> <span class="c1"># roll for a D66 chart</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;FLUX&#39;</span><span class="p">)</span> <span class="c1"># a FLUX roll (-5 to 5)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;3D6+6&#39;</span><span class="p">)</span> <span class="c1"># add +6 DM to roll</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;4D4-4&#39;</span><span class="p">)</span> <span class="c1"># add -4 DM to roll</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2DD+3&#39;</span><span class="p">)</span> <span class="c1"># roll (2D6+3) x 10</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;BOON&#39;</span><span class="p">)</span> <span class="c1"># roll 3D6 and keep the higher two dice</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;4D&#39;</span><span class="p">)</span> <span class="c1"># make a Traveller5 4D roll</span>
+<span class="n">roll</span><span class="p">(</span><span class="s1">&#39;4dF&#39;</span><span class="p">)</span> <span class="c1"># make a FATE roll</span>
+</pre></div>
+</div>
+<p><strong>PyDiceroll</strong> can be used directly at a CMD prompt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">PyDiceroll</span><span class="o">.</span><span class="n">py</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2d6-2&#39;</span><span class="p">)</span>
+
+<span class="n">Your</span> <span class="mi">2</span><span class="n">D6</span><span class="o">-</span><span class="mi">2</span> <span class="n">roll</span> <span class="ow">is</span> <span class="mf">10.</span>
+
+<span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">PyDiceroll</span><span class="o">.</span><span class="n">py</span> <span class="mi">2</span><span class="n">d6</span><span class="o">-</span><span class="mi">2</span>
+
+<span class="n">Your</span> <span class="mi">2</span><span class="n">D6</span><span class="o">-</span><span class="mi">2</span> <span class="n">roll</span> <span class="ow">is</span> <span class="mf">7.</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">PyDiceroll.py</span> <span class="pre">-H</span></code> will provide some help.</p>
+</div>
+<p>A TEST roll that calculates percentages for 2D6 can be issued:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">roll</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="go">      6x6 Roll Chart Test</span>
+<span class="go">     1    2    3    4    5    6</span>
+<span class="go">1  262  296  250  292  292  241</span>
+<span class="go">2  270  315  299  236  279  261</span>
+<span class="go">3  295  274  288  274  291  295</span>
+<span class="go">4  273  284  279  276  249  273</span>
+<span class="go">5  293  280  291  276  280  283</span>
+<span class="go">6  270  276  282  272  273  280</span>
+<span class="go">            6x6 Roll Chart Percentage</span>
+<span class="go">        1       2       3       4       5       6</span>
+<span class="go">1   2.62%   5.66%   8.60%  11.38%  13.93%  16.23%</span>
+<span class="go">2   5.66%   8.60%  11.38%  13.93%  16.23%  13.95%</span>
+<span class="go">3   8.60%  11.38%  13.93%  16.23%  13.95%  11.02%</span>
+<span class="go">4  11.38%  13.93%  16.23%  13.95%  11.02%   8.25%</span>
+<span class="go">5  13.93%  16.23%  13.95%  11.02%   8.25%   5.56%</span>
+<span class="go">6  16.23%  13.95%  11.02%   8.25%   5.56%   2.80%</span>
+</pre></div>
+</div>
+<p>The roll will return a list of percentages for 2-12 rolled.</p>
+<p>D09 rolls will generate a range of 0 - 9.</p>
+<p>D99 rolls will generate a range of 0 - 99.</p>
+<p>D2 rolls will generate a range of 0 - 1.</p>
+<p>The 4dF roll type for FATE area available as well.</p>
+<p>1D thru 10D rolls for Traveller5 can be performed with DM support.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.2?</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>PyDiceroll Tutorial</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rolling-the-dice">Rolling the Dice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="what_is_new.html" title="What’s New with PyDiceroll 3.2?"
+              >previous</a> |
+            <a href="samples.html" title="Using roll() in Your Own Code"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, SHONNER CORP.
+      Last updated on Apr 24, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
