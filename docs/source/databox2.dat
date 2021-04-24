@@ -1,7 +1,7 @@
 C:\>PyDiceroll.py roll('2d6-2')
 
-Your 2D6-2 roll is 10.
+Your '2D6-2' roll is 10.
 
 C:\>PyDiceroll.py 2d6-2
 
-Your 2D6-2 roll is 7.
+Your '2D6-2' roll is 7.
