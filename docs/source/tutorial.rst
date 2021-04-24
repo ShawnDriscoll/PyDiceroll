@@ -45,7 +45,7 @@ The dice types to roll are:
 
 Additional dice types available are:
 
-   **BOON, BANE, and D2**
+   **BOON, BANE,** and **D2**
 
 .. note::
 
@@ -66,7 +66,7 @@ Some examples are:
 
     Typing ``PyDiceroll.py -H`` will provide some help.
 
-A TEST roll that calculates percentages for 2D6 can be issued:
+A **TEST** roll that calculates percentages for 2D6 can be issued:
 
 >>> roll('test')
       6x6 Roll Chart Test

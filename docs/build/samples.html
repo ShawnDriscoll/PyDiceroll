@@ -87,27 +87,27 @@
 <span class="c1"># Enter your character&#39;s chances to succeed at a task</span>
 <span class="n">skilled</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Is your character trained for the task ([y]/n)? &#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">skilled</span> <span class="o">==</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
-    <span class="n">die_mod</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+        <span class="n">die_mod</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter your character&#39;s skill level&quot;</span><span class="p">)</span>
-    <span class="n">die_mod</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(0 to 4)? &#39;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter your character&#39;s skill level&quot;</span><span class="p">)</span>
+        <span class="n">die_mod</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(0 to 4)? &#39;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter the difficulty of the task&#39;</span><span class="p">)</span>
-<span class="n">difficulty</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(Impossible: -6 to Easy: +6)? &#39;</span><span class="p">))</span>
+<span class="n">difficulty</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;(Simple: +2 to Impossible: +16)? &#39;</span><span class="p">))</span>
 
-<span class="c1"># The player must roll an 8 or higher for their character to succeed</span>
-<span class="n">dice_roll</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">die_mod</span> <span class="o">+</span> <span class="n">difficulty</span>
+<span class="c1"># The player must roll the difficulty or higher for their character to succeed</span>
+<span class="n">dice_roll</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s1">&#39;2D6&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">die_mod</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You rolled:&#39;</span><span class="p">,</span> <span class="n">dice_roll</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">dice_roll</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character succeeds with the task.&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character saved everyone.&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">dice_roll</span> <span class="o">&gt;=</span> <span class="n">difficulty</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character succeeds with the task.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="n">difficulty</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character saved everyone.&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character fails at the task.&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">3</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character becomes injured.&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">6</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character died from injuries!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character fails at the task.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="n">difficulty</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">3</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character becomes injured.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dice_roll</span> <span class="o">-</span> <span class="n">difficulty</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">6</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your character died from injuries!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
