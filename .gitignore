@@ -1,0 +1,50 @@
+
+#############
+## diceroll
+#############
+Logs/
+*.log
+
+
+#############
+## Windows
+#############
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac
+.DS_Store
+
+
+############
+## Python
+############
+
+*.pyc
+
+# Packages
+*.egg
+*.egg-info
+dist/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+
+#########
+## gcc
+#########
+*.exe
+
+
+############
+## Jython
+############
+*.class
