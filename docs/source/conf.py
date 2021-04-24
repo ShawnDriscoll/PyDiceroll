@@ -99,10 +99,10 @@ html_theme = 'agogo'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'PyDiceroll 3.2 Operations Manual'
+html_title = 'PyDiceroll 3.2 Operations Manual 2nd Edition'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = 'PyDiceroll 3.2 Operations Manual'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -124,7 +124,7 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-html_use_smartypants = False
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {}
@@ -154,7 +154,7 @@ html_copy_source = False
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dicerolldoc'
+htmlhelp_basename = 'pydicerolldoc'
 
 
 # Options for LaTeX output
@@ -170,7 +170,7 @@ latex_font_size = '12pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'diceroll.tex', 'PyDiceroll Operations Manual',
+  ('index', 'pydiceroll.tex', 'PyDiceroll Operations Manual\n2nd Edition',
    'Shawn Driscoll', 'manual'),
 ]
 
@@ -181,7 +181,7 @@ latex_logo = 'pydiceroll_manual_cover_pdf_art.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-latex_use_parts = False
+latex_use_parts = True
 
 # Additional stuff for the LaTeX preamble.
 #latex_preamble = ''
@@ -190,4 +190,4 @@ latex_use_parts = False
 #latex_appendices = []
 
 # If false, no module index is generated.
-latex_use_modindex = False
+latex_use_modindex = True
