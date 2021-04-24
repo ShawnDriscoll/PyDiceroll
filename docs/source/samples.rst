@@ -34,34 +34,34 @@ For Probabilites
 ----------------
 
 Sample Task Resolution: ::
-    
-	# import the roll() module
-	from PyDiceroll import roll
 
-	# Enter your character's chances to succeed at a task
-	skilled = input('Is your character trained for the task ([y]/n)? ')
-	if skilled == 'n':
-		die_mod = -3
-	else:
-		print("Enter your character's skill level")
-		die_mod = int(input('(0 to 4)? '))
-	print('Enter the difficulty of the task')
-	difficulty = int(input('(Simple: +2 to Impossible: +16)? '))
+    # import the roll() module
+    from PyDiceroll import roll
 
-	# The player must roll the difficulty or higher for their character to succeed
-	dice_roll = roll('2D6') + die_mod
-	print()
-	print('You rolled:', dice_roll)
-	if dice_roll >= difficulty:
-		print('Your character succeeds with the task.')
-		if dice_roll - difficulty >= 6:
-			print('Your character saved everyone.')
-	else:
-		print('Your character fails at the task.')
-		if dice_roll - difficulty < -3:
-			print('Your character becomes injured.')
-		if dice_roll - difficulty < -6:
-			print('Your character died from injuries!')
+    # Enter your character's chances to succeed at a task
+    skilled = input('Is your character trained for the task ([y]/n)? ')
+    if skilled == 'n':
+        die_mod = -3
+    else:
+        print("Enter your character's skill level")
+        die_mod = int(input('(0 to 4)? '))
+    print('Enter the difficulty of the task')
+    difficulty = int(input('(Simple: +2 to Impossible: +16)? '))
+
+    # The player must roll the difficulty or higher for their character to succeed
+    dice_roll = roll('2D6') + die_mod
+    print()
+    print('You rolled:', dice_roll)
+    if dice_roll >= difficulty:
+        print('Your character succeeds with the task.')
+        if dice_roll - difficulty >= 6:
+            print('Your character saved everyone.')
+    else:
+        print('Your character fails at the task.')
+        if dice_roll - difficulty < -3:
+            print('Your character becomes injured.')
+        if dice_roll - difficulty < -6:
+            print('Your character died from injuries!')
 
 For Repairing Game Code
 -----------------------
