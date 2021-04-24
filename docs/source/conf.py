@@ -46,7 +46,8 @@ author = 'Shawn Driscoll'
 # The short X.Y version.
 version = '3.2'
 # The full version, including alpha/beta/rc tags.
-release = '3.2.0b'
+#release = '3.2.0b'
+release = '(2nd Edition)'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -99,10 +100,10 @@ html_theme = 'agogo'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'PyDiceroll 3.2 Operations Manual 2nd Edition'
+html_title = 'PyDiceroll 3.2 Operations Manual'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'PyDiceroll 3.2 Operations Manual'
+#html_short_title = 'PyDiceroll 3.2 Operations Manual'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -124,7 +125,7 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-html_use_smartypants = True
+html_use_smartypants = False
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {}
@@ -170,7 +171,7 @@ latex_font_size = '12pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'pydiceroll.tex', 'PyDiceroll Operations Manual\n2nd Edition',
+  ('index', 'pydiceroll.tex', ('PyDiceroll Operations Manual', '2nd Edition'),
    'Shawn Driscoll', 'manual'),
 ]
 
