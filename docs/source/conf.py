@@ -171,8 +171,7 @@ latex_font_size = '12pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'pydiceroll.tex', ('PyDiceroll Operations Manual', '2nd Edition'),
-   'Shawn Driscoll', 'manual'),
+  ('index', 'pydiceroll.tex', 'PyDiceroll 3.2 Operations Manual', 'Shawn Driscoll', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -182,7 +181,7 @@ latex_logo = 'pydiceroll_manual_cover_pdf_art.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-latex_use_parts = True
+latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
 #latex_preamble = ''
