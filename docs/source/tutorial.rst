@@ -45,16 +45,19 @@ The dice types to roll are:
    DD, BOON, BANE, FLUX, GOODFLUX, BADFLUX**, and **4dF**.
 
 **D09** rolls will generate a range of **0 - 9**.
+
 **D99** rolls will generate a range of **0 - 99**.
+
 **D2** rolls will generate a range of **0 - 1**.
+
 The **4dF** roll type is for FATE mechanics.
+
 Traveller5 uses **1D** thru **10D** rolls, depending on the difficulty of a task. DMs are supported.
 
 
 .. note::
 
-   You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
-   covered by **PyDiceroll**. However, more are planned for in future releases.
+   You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are covered by **PyDiceroll**. However, more are planned for in future releases.
 
 **PyDiceroll** uses a simple standard when it comes to rolling various dice types.
 
