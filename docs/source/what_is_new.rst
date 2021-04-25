@@ -13,3 +13,9 @@ Refactored for Python 3.9
 -------------------------
 
 **PyDiceroll's** code has been updated from 2.5 to 3.9 standards.
+
+
+The D5 Die
+----------
+
+The D5 has been added to **PyDiceroll**. It is basically a D10 divided by 2, much like how the D3 die is a D6 that is divided by 2.
