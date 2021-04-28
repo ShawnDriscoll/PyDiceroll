@@ -13,7 +13,7 @@ So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinj
 generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.
 
 In a nutshell,
-Sphinx is an EXE (generated during its install from a pip command, which is still magic to me, that *it just runs* in
+Sphinx is an EXE (generated during its install from a pip command, which is still magic to me how *it just runs* in
 Python 3.9+) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
 through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
 from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
@@ -89,7 +89,7 @@ Some ways to see if the ``PyDiceroll`` module was installed correctly is by typi
 ('3.2', 'roll(), release version 3.2.0b for Python 3.9.4')
 >>> print(roll.__doc__)
     The dice types to roll are:
-        '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
+        '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
         and also Traveller5's 1D thru 10D rolls

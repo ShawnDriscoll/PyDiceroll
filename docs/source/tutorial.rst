@@ -65,9 +65,15 @@ Some examples are:
 
 .. literalinclude:: databox1.dat
 
-**PyDiceroll** can be used directly at a CMD prompt:
+**PyDiceroll** can be used directly at a CMD prompt using:
+
+The long form:
 
 .. literalinclude:: databox2.dat
+
+Or the short form:
+
+.. literalinclude:: databox3.dat
 
 .. note::
 

@@ -81,7 +81,7 @@
      Microsoft Visual Studio Code.
 	 
    import
-     The import command in Python is the same as the load command in Basic09. It's one
+     The import command in Python is the same as the load command in BASIC09. It's one
      of the most over-used commands in Python. Python can import code from the future.
     
    integer
@@ -137,6 +137,10 @@
      intelligible pattern or combination. Individual random events are
      by definition unpredictable, but in many cases the frequency of
      different outcomes over a large number of events (or "trials") is predictable.
+
+   RNG
+     Random number generator. Mostly used as a meme these days. But still has its very
+     practical uses.
 
    RPG
      Role-playing games use dice. PyDiceroll makes attempts at rolling the dice for the

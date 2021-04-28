@@ -56,7 +56,7 @@ a default logging mode of <code class="docutils literal notranslate"><span class
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PyDiceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Your INFO logging will output as:</p>
+<p>Your <strong>INFO</strong> logging will output as:</p>
 <blockquote>
 <div><div class="line-block">
 <div class="line">…INFO PyDiceroll - Logging started.</div>
@@ -68,7 +68,7 @@ a default logging mode of <code class="docutils literal notranslate"><span class
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PyDiceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Your DEBUG logging will output as:</p>
+<p>Your <strong>DEBUG</strong> logging will output as:</p>
 <blockquote>
 <div><div class="line-block">
 <div class="line">…INFO PyDiceroll - Logging started.</div>
@@ -81,16 +81,24 @@ a default logging mode of <code class="docutils literal notranslate"><span class
 <div class="line">…INFO PyDiceroll - ‘3D4’ = 3D4+0 = 8</div>
 </div>
 </div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Running <strong>PyDiceroll</strong> in <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> mode may create a log file that will be too huge to open. A program of yours
 left running for a long period of time could create millions of lines of recorded log entries. Fortunately, <code class="docutils literal notranslate"><span class="pre">PyDiceroll.log</span></code> is
-reset each time your program is run. Also, any errors encountered will be recorded as <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> in the log file, no
+reset each time your program is run.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any errors encountered will be recorded as <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> in the log file, no
 matter which logging mode you’ve chosen to use.</p>
 </div>
 <p>If your own code has logging enabled for it, be sure to let <strong>PyDiceroll</strong> know by changing <code class="docutils literal notranslate"><span class="pre">your_code_name_here</span></code> to
-the name of the program you’re calling <code class="docutils literal notranslate"><span class="pre">roll()</span></code> from.</p>
+the name of the program you’re calling <code class="docutils literal notranslate"><span class="pre">roll()</span></code> from. The original line looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;your_code_name_here.PyDiceroll&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So, if your own code is called <code class="docutils literal notranslate"><span class="pre">dungeoneer.py</span></code>, then make</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;dungeoneer.PyDiceroll&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -6,9 +6,9 @@ have a copy of **PyDiceroll** that was distributed with another program you're u
 
 Besides its common ``.py`` format, **PyDiceroll** can be found in a ``.pyd`` format as
 well. This format is packaged as a dynamic link library, and will work the same way as
-the ``.py`` format. The format is typically bundled with the software that was designed
-for using it.
+the ``.py`` format. The format is typically bundled with the software that it was designed
+for.
 
-.. Warning::
+.. Note::
    The ``.pyd`` format can only be imported and will not execute at a CMD prompt.
 

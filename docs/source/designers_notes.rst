@@ -64,7 +64,7 @@ Which looked a bit cleaner. But I was debating if I wanted to use ``randint()`` 
 my normal coding.
 
 So while I was learning how to write my own functions, as well as how to go about importing them, I came up with
-an idea for **PyDiceroll**. It would included a ``roll()`` function, and a ``die_rolls()`` function as
+an idea for **PyDiceroll**. It would include a ``roll()`` function, and a ``die_rolls()`` function as
 a "side effect." Even though ``die_rolls()`` had no error-checking, ``roll()`` would call it after
 doing its own error-checking.
 
@@ -102,7 +102,7 @@ say for a *great* fifteen years. Because they were great. But most great things 
 
 And so it was, that yesterday I would uninstall Python 2.5.4 along with all its things. And today, I would begin the installation of
 Python 3.9.4. I guess one could say it was the terminated support for Python 2.x this year that nudged me, along with some of the
-older Python 3.x terminations as well. Even Python 3.9+ saw earlier Python 3's as dead weight. Python 3's that I didn't want to deal with, such
+older Python 3.x terminations as well. Even Python 3.9+ saw earlier Python 3's as dead weight (Python 3's that I didn't want to deal with either), such
 as 3.0, 3.1, 3.2, 3.3, 3.4, and 3.5. And now they are gone. And I can skip ahead to a refined version of Python 3 with no baggage
 from 2.6 or 2.7 whatsoever.
 

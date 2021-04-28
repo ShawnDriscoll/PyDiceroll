@@ -1,6 +1,6 @@
 **Software Titles That Use PyDiceroll**
 =======================================
 
-Here is a sample list of software titles using **PyDiceroll**:
+Here is a sample list of software titles, at the time of this writing, using **PyDiceroll**:
 
 **TravCalc 3.1.0**
