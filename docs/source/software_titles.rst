@@ -3,4 +3,4 @@
 
 Here is a sample list of software titles, at the time of this writing, using **PyDiceroll**:
 
-**TravCalc 3.1.0**
+**PyTravCalc 3.1.5**
