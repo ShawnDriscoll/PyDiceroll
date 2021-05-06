@@ -93,16 +93,16 @@ reset each time your program is run.</p>
 matter which logging mode you’ve chosen to use.</p>
 </div>
 <p>If your own code has logging enabled for it, be sure to let <strong>PyDiceroll</strong> know by changing <code class="docutils literal notranslate"><span class="pre">your_logger_function_here</span></code> to
-the name of the logger function use by your program that is calling <code class="docutils literal notranslate"><span class="pre">roll()</span></code>. The original line in <strong>PyDiceroll</strong> looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``log = logging.getLogger(&#39;your_logger_function_here.PyDiceroll&#39;)``
+the name of the logger function used by your program that is calling <code class="docutils literal notranslate"><span class="pre">roll()</span></code>. The original line in <strong>PyDiceroll</strong> looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;your_logger_function_here.PyDiceroll&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>So, if your own code has:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``log = logging.getLogger(&#39;dungeoneer&#39;)``
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;dungeoneer&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>then in <strong>PyDiceroll</strong>, make</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``log = logging.getLogger(&#39;dungeoneer.PyDiceroll&#39;)``
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;dungeoneer.PyDiceroll&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
