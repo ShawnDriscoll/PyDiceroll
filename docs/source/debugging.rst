@@ -39,11 +39,15 @@ Your **DEBUG** logging will output as:
    Any errors encountered will be recorded as ``ERROR`` in the log file, no
    matter which logging mode you've chosen to use.
 
-If your own code has logging enabled for it, be sure to let **PyDiceroll** know by changing ``your_code_name_here`` to
-the name of the program you're calling ``roll()`` from. The original line looks like this: ::
+If your own code has logging enabled for it, be sure to let **PyDiceroll** know by changing ``your_logger_function_here`` to
+the name of the logger function use by your program that is calling ``roll()``. The original line in **PyDiceroll** looks like this: ::
 
-   log = logging.getLogger('your_code_name_here.PyDiceroll')
+   ``log = logging.getLogger('your_logger_function_here.PyDiceroll')``
 
-So, if your own code is called ``dungeoneer.py``, then make ::
+So, if your own code has: ::
+   
+   ``log = logging.getLogger('dungeoneer')``
+   
+then in **PyDiceroll**, make ::
 
-   log = logging.getLogger('dungeoneer.PyDiceroll')
+   ``log = logging.getLogger('dungeoneer.PyDiceroll')``
