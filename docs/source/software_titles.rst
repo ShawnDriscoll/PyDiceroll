@@ -5,4 +5,6 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **PyTravCalc 3.1.5**
 
+**PyImperial CharGen 1.0.0**
+
 **PyQt5-Dice-App**
