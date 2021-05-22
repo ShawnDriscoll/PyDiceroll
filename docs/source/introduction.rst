@@ -90,7 +90,7 @@ Some ways to see if the ``PyDiceroll`` module was installed correctly is by typi
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
-        'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
+        'D12', 'D20', 'D30', 'D099', 'D100', 'D44', 'D66', 'D88', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
         and also Traveller5's 1D thru 10D rolls
     Some examples are:
