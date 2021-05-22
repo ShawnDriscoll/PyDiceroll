@@ -29,7 +29,7 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '3.2'
-__release__ = '3.2.0b'
+__release__ = '3.2.1b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('PyDiceroll')
@@ -85,7 +85,7 @@ def roll(dice):
     '''
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
-        'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
+        'D12', 'D20', 'D30', 'D099', 'D100', 'D44', 'D66', 'D88', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
         and also Traveller5's 1D thru 10D rolls
 
@@ -109,7 +109,7 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('your_code_name_here.PyDiceroll')
+    log = logging.getLogger('your_logger_function_here.PyDiceroll')
 
     # make inputted string argument upper case, and remove spaces
     dice = str(dice).upper().replace(' ','')
@@ -327,9 +327,21 @@ def roll(dice):
                 rolled = _dierolls(2, 1) - 1
                 diceroll_log.info("'%s' = %d%s+%d = %d" % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
+            elif dice_type == 'D44' and num_dice == 1 and dice_mod == 0:
+                roll_1 = _dierolls(4, 1)
+                roll_2 = _dierolls(4, 1)
+                rolled = roll_1 * 10 + roll_2
+                diceroll_log.info("'%s' = %d%s+%d = %d and %d = %d" % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
+                return rolled
             elif dice_type == 'D66' and num_dice == 1 and dice_mod == 0:
                 roll_1 = _dierolls(6, 1)
                 roll_2 = _dierolls(6, 1)
+                rolled = roll_1 * 10 + roll_2
+                diceroll_log.info("'%s' = %d%s+%d = %d and %d = %d" % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
+                return rolled
+            elif dice_type == 'D88' and num_dice == 1 and dice_mod == 0:
+                roll_1 = _dierolls(8, 1)
+                roll_2 = _dierolls(8, 1)
                 rolled = roll_1 * 10 + roll_2
                 diceroll_log.info("'%s' = %d%s+%d = %d and %d = %d" % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled

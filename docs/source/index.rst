@@ -18,7 +18,7 @@ This documentation explains how to install and use the **PyDiceroll module** for
 .. image:: python_v3_9_4_tag.png
     :target: https://www.python.org/download/releases/3.9.4/
     
-.. image:: release_v3_2_0b_tag.png
+.. image:: release_v3_2_1b_tag.png
 
 .. image:: https://readthedocs.org/projects/pydiceroll/badge/?version=latest
     :target: http://pydiceroll.readthedocs.io/en/latest/?badge=latest

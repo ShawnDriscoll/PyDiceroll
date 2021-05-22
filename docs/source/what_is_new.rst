@@ -19,3 +19,9 @@ The D5 Die
 ----------
 
 The D5 has been added to **PyDiceroll**. It is basically a D10 divided by 2, much like how the D3 die is a D6 that is divided by 2.
+
+
+New in PyDiceroll 3.2.1
+-----------------------
+
+New D44 and D88 rolls have been added. These are table rolls, similar to the D66 roll.

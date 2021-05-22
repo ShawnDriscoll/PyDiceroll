@@ -86,7 +86,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.2', 'roll(), release version 3.2.0b for Python 3.9.4')
+('3.2', 'roll(), release version 3.2.1b for Python 3.9.4')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
