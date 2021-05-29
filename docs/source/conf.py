@@ -44,10 +44,10 @@ author = 'Shawn Driscoll'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '3.2'
+version = '3.3'
 # The full version, including alpha/beta/rc tags.
-#release = '3.2.1b'
-release = '(2nd Edition)'
+#release = '3.3.0b'
+release = '(3rd Edition)'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -95,14 +95,14 @@ pygments_style = 'sphinx'
     # html_theme = 'nature'
 
 #html_theme = 'sphinx_rtd_theme'
-#html_theme = 'agogo'
+html_theme = 'agogo'
 #html_theme = 'alabaster'
 #html_theme = 'nature'
-html_theme = 'classic'
+#html_theme = 'classic'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'PyDiceroll 3.2 Operations Manual'
+html_title = 'PyDiceroll 3.3 Operations Manual'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = 'PyDiceroll 3.2 Operations Manual'
@@ -173,7 +173,7 @@ latex_font_size = '12pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'pydiceroll.tex', 'PyDiceroll 3.2 Operations Manual', 'Shawn Driscoll', 'manual'),
+  ('index', 'pydiceroll.tex', 'PyDiceroll 3.3 Operations Manual', 'Shawn Driscoll', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

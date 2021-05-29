@@ -1,7 +1,7 @@
 #
 #   PyDiceroll.py
 #
-#   Written for Python 3.9.4
+#   Written for Python 3.9.5
 #
 #   To use this module: from PyDiceroll import roll
 #
@@ -28,8 +28,9 @@ from colorama import Fore, Back, Style
 
 init() # initialize colorama
 
-__version__ = '3.2'
-__release__ = '3.2.1b'
+__version__ = '3.3'
+__release__ = '3.3.0b'
+__py_version__ = '3.9.5'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('PyDiceroll')
@@ -51,6 +52,8 @@ diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 simple_dice = ['D3', 'D4', 'D5', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
 traveller5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D']
+
+__error__ = -9999
 
 def _dierolls(dtype, dcount):
     '''
@@ -106,7 +109,7 @@ def roll(dice):
     roll('4D') -- make a Traveller5 4D roll
     roll('info') -- release version of program
     
-    An invalid roll will return a 0.
+    An invalid roll will return a -9999 value.
     '''
 
     log = logging.getLogger('your_logger_function_here.PyDiceroll')
@@ -116,7 +119,7 @@ def roll(dice):
     
     # was information for this program asked for?
     if dice == 'INFO':
-        ver = 'roll(), release version ' + __release__ + ' for Python 3.9.4'
+        ver = 'roll(), release version ' + __release__ + ' for Python ' + __py_version__
         diceroll_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
     
@@ -264,7 +267,7 @@ def roll(dice):
         print(Fore.RED + Style.BRIGHT + 'Negative dice count found! [ERROR]')
         print(Style.RESET_ALL)
         diceroll_log.error("Negative number of dice = '" + dice + "' [ERROR]")
-        return 0
+        return __error__
 
     else:
         # check if T5 dice are being rolled
@@ -392,7 +395,7 @@ def roll(dice):
     print()
     print("roll('info') -- release version of program")
     print()
-    return 0
+    return __error__
 
 if __name__ == '__main__':
     diceroll_log.info("PyDiceroll was run without 'roll()' called.  Help will be sent if needed.")
@@ -420,7 +423,7 @@ if __name__ == '__main__':
         print('     Or just:')
         print('     C:\>PyDiceroll.py 2d6')
     elif sys.argv[1] in ['-V', '/V', '--version']:
-        print('     roll(), release version ' + __release__ + ' for Python 3.9.4')
+        print('     roll(), release version ' + __release__ + ' for Python ' + __py_version__)
     else:
         dice = ''
         if len(sys.argv) > 2:
@@ -439,7 +442,7 @@ if __name__ == '__main__':
                     print("Your '%s' roll is %d." % (dice, num))
                     diceroll_log.info("The direct call to PyDiceroll with '%s' resulted in %d." % (dice, num))
                 elif dice == 'INFO':
-                    print('roll(), release version ' + __release__ + ' for Python 3.9.4')
+                    print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
         else:
             dice = str(dice).upper().strip()
             num = roll(dice)
@@ -447,4 +450,4 @@ if __name__ == '__main__':
                 print("Your '%s' roll is %d." % (dice, num))
                 diceroll_log.info("The direct call to PyDiceroll with '%s' resulted in %d." % (dice, num))
             elif dice == 'INFO':
-                    print('roll(), release version ' + __release__ + ' for Python 3.9.4')
+                    print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)

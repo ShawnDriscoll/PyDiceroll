@@ -37,7 +37,7 @@ Requirements
 * **Python 3.9+**
    
    **PyDiceroll** was written using the C implementation of Python
-   version 3.9.4. Also known as CPython. With some doing, this
+   version 3.9.5. Also known as CPython. With some doing, this
    module could of course be re-written for Jython, PyPy, or
    IronPython.
    
@@ -55,7 +55,7 @@ Requirements
    
 
 .. Warning::
-   **PyDiceroll 3.2** will not work with **Python 2.7-**.
+   **PyDiceroll 3.3** will not work with **Python 2.7-**.
 
 
 Installing Locally to Your Folder
@@ -63,7 +63,7 @@ Installing Locally to Your Folder
 
 .. figure:: python_file.png
 
-Installing **PyDiceroll 3.2** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
+Installing **PyDiceroll 3.3** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::
@@ -86,7 +86,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.2', 'roll(), release version 3.2.1b for Python 3.9.4')
+('3.3', 'roll(), release version 3.3.0b for Python 3.9.5')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
@@ -109,4 +109,4 @@ Some ways to see if the ``PyDiceroll`` module was installed correctly is by typi
     roll('4D') -- make a Traveller5 4D roll
     roll('4dF') -- make a FATE roll
     roll('info') -- release version of program
-    An invalid roll will return a 0.
+    An invalid roll will return a -9999 value.

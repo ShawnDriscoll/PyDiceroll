@@ -79,7 +79,7 @@ Easily becomes: ::
 
 Encountering Errors
 -------------------
-Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function: ::
+Entering an invalid string for ``roll()`` will return an error message, as well as a value of -9999 from the function: ::
 
    print(roll('3d1'))
 
@@ -87,4 +87,4 @@ Entering an invalid string for ``roll()`` will return an error message, as well 
 
    ** DICE ERROR! '3D1' is unknown **
    
-   | 0
+   | -9999

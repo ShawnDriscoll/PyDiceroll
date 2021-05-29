@@ -1,5 +1,17 @@
-**What's New with PyDiceroll 3.2?**
+**What's New with PyDiceroll 3.3?**
 ===================================
+
+New for PyDiceroll 3.3.0
+------------------------
+
+Input errors for ``roll()`` will now return a value of -9999 instead of 0.
+
+
+New in PyDiceroll 3.2.1
+-----------------------
+
+New **D44** and **D88** rolls have been added. These are table rolls, similar to the **D66** roll.
+
 
 Parsing
 -------
@@ -15,13 +27,7 @@ Refactored for Python 3.9
 **PyDiceroll's** code has been updated from 2.5 to 3.9 standards.
 
 
-The D5 Die
-----------
+The **D5** Die
+--------------
 
-The D5 has been added to **PyDiceroll**. It is basically a D10 divided by 2, much like how the D3 die is a D6 that is divided by 2.
-
-
-New in PyDiceroll 3.2.1
------------------------
-
-New D44 and D88 rolls have been added. These are table rolls, similar to the D66 roll.
+The **D5** has been added to **PyDiceroll**. It is basically a **D10** divided by 2, much like how the **D3** die is a **D6** that is divided by 2.
