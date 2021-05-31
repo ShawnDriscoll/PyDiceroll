@@ -77,7 +77,7 @@ Or the short form:
 
 .. note::
 
-    Typing ``PyDiceroll.py -H`` will provide some help.
+    Typing ``PyDiceroll.py -h`` will provide some help.
 
 A **TEST** roll that calculates percentages for 2D6 can be issued:
 

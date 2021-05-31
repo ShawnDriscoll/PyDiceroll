@@ -402,9 +402,9 @@ if __name__ == '__main__':
     print()
     if len(sys.argv) < 2:
         print('     Type:')
-        print("     'PyDiceroll.py -H' for help")
-        print("     'PyDiceroll.py -V' for version")
-    elif sys.argv[1] in ['-H', '/H', '--help', '-?', '/?']:
+        print("     'PyDiceroll.py -h' for help")
+        print("     'PyDiceroll.py -v' for version")
+    elif sys.argv[1] in ['-h', '/h', '--help', '-?', '/?']:
         print('     PyDiceroll is a module (containing a roll function)')
         print('     that needs to be imported into Python.')
         print()
@@ -422,7 +422,7 @@ if __name__ == '__main__':
         print()
         print('     Or just:')
         print('     C:\>PyDiceroll.py 2d6')
-    elif sys.argv[1] in ['-V', '/V', '--version']:
+    elif sys.argv[1] in ['-v', '/v', '--version']:
         print('     roll(), release version ' + __release__ + ' for Python ' + __py_version__)
     else:
         dice = ''
