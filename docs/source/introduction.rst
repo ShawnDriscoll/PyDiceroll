@@ -34,7 +34,7 @@ Requirements
    **PyDiceroll** has been tested on Windows versions: 10.
    It has not been tested on MacOS or Linux.
    
-* **Python 3.9+**
+* **Python 3.9.5**
    
    **PyDiceroll** was written using the C implementation of Python
    version 3.9.5. Also known as CPython. With some doing, this
