@@ -1,47 +1,175 @@
 
-<!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PyDiceroll 3.3 Overview &#8212; PyDiceroll 3.3 Operations Manual</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PyDiceroll 3.3 Overview &mdash; PyDiceroll 3.3 Operations Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
     <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction" href="introduction.html" /> 
-  </head><body>
-    <div class="header-wrapper" role="banner">
-      <div class="header">
-          <p class="logo"><a href="#">
-            <img class="logo" src="_static/shonner_trans.png" alt="Logo"/>
-          </a></p>
-        <div class="headertitle"><a
-          href="#">PyDiceroll 3.3 Operations Manual</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="introduction.html" title="Introduction"
-             accesskey="N">next</a> |
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a>
-        </div>
-       </div>
-    </div>
+</head>
 
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="document">
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> PyDiceroll
+          
+
+          
             
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+            <img src="_static/shonner_trans.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.3?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">PyDiceroll</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><strong>PyDiceroll 3.3 Overview</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="figure align-default">
 <img alt="_images/pydiceroll_manual_cover_pdf_art.png" src="_images/pydiceroll_manual_cover_pdf_art.png" />
@@ -121,69 +249,53 @@ Future Enterprises.</p>
 </div>
 
 
-            <div class="clearer"></div>
+           </div>
+           
           </div>
-        </div>
-      </div>
-        </div>
-        <div class="sidebar">
-          
-          <h3>Table of Contents</h3>
-          <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll 3.3?</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="samples.html"><strong>Using roll() in Your Own Code</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="debugging.html"><strong>Debugging PyDiceroll</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="about_the_author.html"><strong>About the Author</strong></a></li>
-</ul>
-
-          <div role="search">
-            <h3 style="margin-top: 1.5em;">Search</h3>
-            <form class="search" action="search.html" method="get">
-                <input type="text" name="q" />
-                <input type="submit" value="Go" />
-            </form>
-          </div>
-
-        </div>
-        <div class="clearer"></div>
-      </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
-    <div class="footer-wrapper">
-      <div class="footer">
-        <div class="left">
-          <div role="navigation" aria-label="related navigaton">
-            <a href="introduction.html" title="Introduction"
-              >next</a> |
-            <a href="py-modindex.html" title="Python Module Index"
-              >modules</a> |
-            <a href="genindex.html" title="General Index"
-              >index</a>
-          </div>
-          <div role="note" aria-label="source link">
-          </div>
-        </div>
+  <hr/>
 
-        <div class="right">
-          
-    <div class="footer" role="contentinfo">
+  <div role="contentinfo">
+    <p>
         &#169; Copyright 2021, SHONNER CORP.
-      Last updated on Jun 02, 2021.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
-    </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
-    </div>
+      <span class="lastupdated">
+        Last updated on Jun 03, 2021.
+      </span>
 
-  </body>
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
