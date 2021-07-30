@@ -10,3 +10,5 @@ Here is a sample list of software titles, at the time of this writing, using **P
 **PyImperial CharGen 1.0.0**
 
 **PyQt5-Dice-App**
+
+**PyTravLITE 0.2.5**
