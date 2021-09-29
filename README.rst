@@ -8,6 +8,9 @@
     :target: http://pydiceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
 
+.. image:: https://img.shields.io/github/stars/ShawnDriscoll/pydiceroll.svg
+	:target: https://github.com/ShawnDriscoll/pydiceroll/stargazers
+
 
 .. figure:: docs/source/pydiceroll_manual_cover_pdf_art.png
 
