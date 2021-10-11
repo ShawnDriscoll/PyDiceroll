@@ -450,4 +450,4 @@ if __name__ == '__main__':
                 print("Your '%s' roll is %d." % (dice, num))
                 diceroll_log.info("The direct call to PyDiceroll with '%s' resulted in %d." % (dice, num))
             elif dice == 'INFO':
-                    print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
+                print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
