@@ -5,7 +5,7 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **PyTravCalc 3.1.5**
 
-**PyTravCalc 3.2.0**
+**PyTravCalc 3.2.1**
 
 **PyTravCalc 4.0.0**
 

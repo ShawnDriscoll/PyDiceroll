@@ -75,7 +75,7 @@ incorrect ``randint()`` calls for rolling two 6-sided dice. A line such as: ::
 
 Easily becomes: ::
     
-    world_size = roll('2d6') - 2
+    world_size = roll('2d6-2')
 
 Encountering Errors
 -------------------
