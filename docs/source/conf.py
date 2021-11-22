@@ -37,7 +37,7 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'PyDiceroll'
-copyright = '2021, SHONNER CORP'
+copyright = '2022, SHONNER CORP'
 author = 'Shawn Driscoll'
 
 # The default replacements for |version| and |release|, also used in various
@@ -46,8 +46,8 @@ author = 'Shawn Driscoll'
 # The short X.Y version.
 version = '3.3'
 # The full version, including alpha/beta/rc tags.
-#release = '3.3.0b'
-release = '(3rd Edition)'
+release = '3.3.1b'
+#release = '(3rd Edition)'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -105,7 +105,7 @@ html_theme = 'sphinx_rtd_theme'
 html_title = 'PyDiceroll 3.3 Operations Manual'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = 'PyDiceroll 3.2 Operations Manual'
+#html_short_title = 'PyDiceroll 3.3 Operations Manual'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

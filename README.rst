@@ -1,7 +1,7 @@
-.. image:: docs/source/python_v3_9_5_tag.png
+.. image:: docs/source/python_v3_9_7_tag.png
     :target: https://www.python.org/downloads/release/python-395/
     
-.. image:: docs/source/release_v3_3_0b_tag.png
+.. image:: docs/source/release_v3_3_1b_tag.png
     :target: https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/pydiceroll/badge/?version=latest

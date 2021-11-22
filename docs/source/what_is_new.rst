@@ -1,6 +1,12 @@
 **What's New with PyDiceroll 3.3?**
 ===================================
 
+New for PyDiceroll 3.3.1
+------------------------
+
+Fixed error if non-numbers are entered.
+
+
 New for PyDiceroll 3.3.0
 ------------------------
 

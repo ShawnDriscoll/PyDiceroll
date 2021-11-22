@@ -34,10 +34,10 @@ Requirements
    **PyDiceroll** has been tested on Windows versions: 10.
    It has not been tested on MacOS or Linux.
    
-* **Python 3.9.5**
+* **Python 3.9.7**
    
    **PyDiceroll** was written using the C implementation of Python
-   version 3.9.5. Also known as CPython. With some doing, this
+   version 3.9.7. Also known as CPython. With some doing, this
    module could of course be re-written for Jython, PyPy, or
    IronPython.
    
@@ -86,7 +86,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.3', 'roll(), release version 3.3.0b for Python 3.9.5')
+('3.3', 'roll(), release version 3.3.1b for Python 3.9.7')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',

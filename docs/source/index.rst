@@ -15,8 +15,8 @@ The free-to-use source is available at its `GitHub
 
 This documentation explains how to install and use the **PyDiceroll module** for your gaming projects.
 
-.. image:: python_v3_9_5_tag.png
-    :target: https://www.python.org/downloads/release/python-395/
+.. image:: python_v3_9_7_tag.png
+    :target: https://www.python.org/downloads/release/python-397/
     
 .. image:: release_v3_3_0b_tag.png
 
@@ -34,7 +34,7 @@ Download the `PDF
     <iframe width="560" height="315" src="https://www.youtube.com/embed/xuyfLJbdDso" frameborder="0" allowfullscreen></iframe>
 
 The Traveller game in all forms is owned by Far
-Future Enterprises. Copyright 1977 - 2021 Far Future
+Future Enterprises. Copyright 1977 - 2022 Far Future
 Enterprises. Traveller is a registered trademark of Far
 Future Enterprises.
 

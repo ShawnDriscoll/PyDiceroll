@@ -1,7 +1,7 @@
 #
 #   PyDiceroll.py
 #
-#   Written for Python 3.9.5
+#   Written for Python 3.9.7
 #
 #   To use this module: from PyDiceroll import roll
 #
@@ -29,8 +29,8 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '3.3'
-__release__ = '3.3.0b'
-__py_version__ = '3.9.5'
+__release__ = '3.3.1b'
+__py_version__ = '3.9.7'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('PyDiceroll')
@@ -302,8 +302,12 @@ def roll(dice):
     if ichar1 != -1:
         if ichar1 != 0:
             
-            # how many dice are being rolled?
-            num_dice = int(dice[0:ichar1])
+            # is there a number found?
+            if dice[0:ichar1].isdigit():
+                # how many dice are being rolled?
+                num_dice = int(dice[0:ichar1])
+            else:
+                num_dice = 0
     
         if num_dice >= 1:
             
@@ -450,4 +454,4 @@ if __name__ == '__main__':
                 print("Your '%s' roll is %d." % (dice, num))
                 diceroll_log.info("The direct call to PyDiceroll with '%s' resulted in %d." % (dice, num))
             elif dice == 'INFO':
-                    print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
+                print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
