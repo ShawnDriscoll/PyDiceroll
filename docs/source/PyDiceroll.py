@@ -28,8 +28,8 @@ from colorama import Fore, Back, Style
 
 init() # initialize colorama
 
-__version__ = '3.3'
-__release__ = '3.3.1b'
+__version__ = '3.4'
+__release__ = '3.4.0b'
 __py_version__ = '3.9.7'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
@@ -174,6 +174,47 @@ def roll(dice):
         for x in range(len(data)):
             data[x] = data[x] * 100. / n
         return data[2:13]
+
+    # was a min/max/avg asked for?
+    if dice == 'MINMAXAVG':
+        rolls_for_test = ['1d2', '1d3', '1d4', '1d5', '1d6', '1d8', '1d09', '1d10', '1d12', '1d20', '1d30', '1d099', '1d100',
+                  '4df', 'flux', 'goodflux', 'badflux', 'boon', 'bane',
+                  '2d4', '3d4', '4d4',
+                  '2d6', '3d6', '4d6',
+                  '2d8', '3d8', '4d8',
+                  '2d10', '3d10', '4d10',
+                  '2d12', '3d12', '4d12',
+                  '2d20', '3d20', '4d20', '3d6+1', '2d6-2', '2d6-7',
+                  '1dd', '2dd', '3dd', '4dd']
+
+        print()
+        print('Using brute force...')
+        print()
+
+        total_numbers = 2000
+
+        for i in range(len(rolls_for_test)):
+            test_roll = rolls_for_test[i]
+            minimum = 100000000
+            maximum = 0
+            total_sum = 0
+            for n in range(total_numbers):
+                die = roll(test_roll)
+                if minimum > die:
+                    minimum = die
+                if maximum < die:
+                    maximum = die
+                total_sum += die
+            sample = []
+            for x in range(10):
+                sample.append(roll(test_roll))
+
+            print('Test Roll: %s, Min: %d, Max: %d, Avg: %.1f, ' % (test_roll, minimum, maximum, total_sum / total_numbers) + 'Sample:', sample)
+
+        print()
+        print('Increase the value of total_numbers in PyDiceroll to improve its precision.')
+        print()
+        return
 
     log.debug(dice)
     diceroll_log.debug("Asked to roll '%s':" % dice)

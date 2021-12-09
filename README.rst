@@ -1,7 +1,7 @@
 .. image:: docs/source/python_v3_9_7_tag.png
     :target: https://www.python.org/downloads/release/python-395/
     
-.. image:: docs/source/release_v3_3_1b_tag.png
+.. image:: docs/source/release_v3_4_0b_tag.png
     :target: https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/pydiceroll/badge/?version=latest
@@ -14,10 +14,10 @@
 
 .. figure:: docs/source/pydiceroll_manual_cover_pdf_art.png
 
-**PyDiceroll 3.3 for Python 3.9+**
+**PyDiceroll 3.4 for Python 3.9+**
 ==================================
 
-**PyDiceroll 3.3** is a Python 3.9+ module that your game code calls to make dice rolls.
+**PyDiceroll 3.4** is a Python 3.9+ module that your game code calls to make dice rolls.
 
 Read the **PyDiceroll Operations Manual** at http://pydiceroll.readthedocs.io
 
