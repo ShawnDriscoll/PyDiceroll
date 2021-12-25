@@ -13,6 +13,6 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **PyQt5-Dice-App**
 
-**PyTravLITE 0.2.5**
+**PyTravLITE 0.2.6**
 
 **TPS DieRoller 0.1.1**
