@@ -4,7 +4,7 @@
 New for PyDiceroll 3.4.0
 ------------------------
 
-The **MINMAXAVG** roll has been added. Just doing roll('MINMAXAVG') will output the Min, Max, and Averages for various
+The **MINMAXAVG** roll has been added. Just doing ``roll('MINMAXAVG')`` will output the Min, Max, and Averages for various
 rolls. Mostly for testing. Nothing is returned from this roll. So print or variable assignment is not needed.
 
 .. figure:: minmaxavg.png
