@@ -16,3 +16,5 @@ Here is a sample list of software titles, at the time of this writing, using **P
 **PyTravLITE 0.2.6**
 
 **TPS DieRoller 0.1.1**
+
+**SectorGen 0.2.0**
