@@ -4,7 +4,11 @@
 New for PyDiceroll 3.4.0
 ------------------------
 
-The **MINMAXAVG** roll has been added. Just doing ``roll('MINMAXAVG')`` will output the Min, Max, and Averages for various
+The **MINMAXAVG** roll has been added. Just doing:
+
+>>> roll('MINMAXAVG')
+
+will output the Min, Max, and Averages for various
 rolls. Mostly for testing. Nothing is returned from this roll. So print or variable assignment is not needed.
 
 .. figure:: minmaxavg.png
@@ -31,7 +35,7 @@ New **D44** and **D88** rolls have been added. These are table rolls, similar to
 Parsing
 -------
 
-The roll() function has improved parsing that allows for spaces from other program sources. Error-checking understands this
+The ``roll()`` function has improved parsing that allows for spaces from other program sources. Error-checking understands this
 and will even check for negative numbers of dice. This improved feature works whether **PyDiceroll** is being used in a Python
 program or at a CMD prompt.
 

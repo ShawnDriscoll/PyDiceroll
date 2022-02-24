@@ -24,8 +24,7 @@ Desktop.ini
 ############
 ## Python
 ############
-
-*.pyc
+__pycache__/
 
 # Packages
 *.egg
@@ -47,4 +46,4 @@ develop-eggs/
 ############
 ## Jython
 ############
-*.class
+*$py.class
