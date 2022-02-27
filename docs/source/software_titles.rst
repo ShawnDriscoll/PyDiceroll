@@ -18,3 +18,5 @@ Here is a sample list of software titles, at the time of this writing, using **P
 **TPS DieRoller 0.1.1**
 
 **SectorGen 0.2.0**
+
+**TravEncounters 0.0.1**
