@@ -1,8 +1,7 @@
 **PyDiceroll Module**
 =====================
-.. module:: PyDiceroll
 
-.. method:: roll(str(number_of_dice) + str(dice_type) + str(dice_roll_modifier))
+.. method:: PyDiceroll.roll(str(number_of_dice) + str(dice_type) + str(dice_roll_modifier))
 
    | ``roll()`` accepts a string value made up of three concatenated values, then returns an integer.
    |
