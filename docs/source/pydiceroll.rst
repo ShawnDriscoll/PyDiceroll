@@ -2,7 +2,7 @@
 =====================
 .. module:: PyDiceroll
 
-.. method:: roll(number_of_dice + dice_type + dice_roll_modifier)
+.. method:: roll(str(number_of_dice) + str(dice_type) + str(dice_roll_modifier))
 
    | ``roll()`` accepts a string value made up of three concatenated values, then returns an integer.
    |
