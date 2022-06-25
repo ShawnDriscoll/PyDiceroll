@@ -1,5 +1,11 @@
-**What's New with PyDiceroll 3.4?**
+**What's New with PyDiceroll 3.5?**
 ===================================
+
+New for PyDiceroll 3.5.0
+------------------------
+
+More than one **D09** can be rolled at a time now. Added to the **MINMAXAVG** list.
+
 
 New for PyDiceroll 3.4.0
 ------------------------

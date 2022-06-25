@@ -1,13 +1,13 @@
 .. figure:: pydiceroll_manual_cover_pdf_art.png
 
-**PyDiceroll 3.4 Overview**
+**PyDiceroll 3.5 Overview**
 ===========================
 
-**PyDiceroll 3.4** is easy-to-use open source die rolling software. Written
-in Python 3.9.7 and using a variety of IDEs, **PyDiceroll 3.4** supports
+**PyDiceroll 3.5** is easy-to-use open source die rolling software. Written
+in Python 3.9.11 and using a variety of IDEs, **PyDiceroll 3.5** supports
 many gaming and RPG die rolling conventions.
 
-**PyDiceroll 3.4** also supports logging, error reporting, and debugging
+**PyDiceroll 3.5** also supports logging, error reporting, and debugging
 of rolls made.
 
 The free-to-use source is available at its `GitHub
@@ -15,10 +15,10 @@ The free-to-use source is available at its `GitHub
 
 This documentation explains how to install and use the **PyDiceroll module** for your gaming projects.
 
-.. image:: python_v3_9_7_tag.png
+.. image:: python_v3_9_11_tag.png
     :target: https://www.python.org/downloads/release/python-397/
     
-.. image:: release_v3_4_0b_tag.png
+.. image:: release_v3_5_0b_tag.png
 
 .. image:: https://readthedocs.org/projects/pydiceroll/badge/?version=latest
     :target: http://pydiceroll.readthedocs.io/en/latest/?badge=latest

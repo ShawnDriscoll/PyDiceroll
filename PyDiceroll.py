@@ -1,7 +1,7 @@
 #
 #   PyDiceroll.py
 #
-#   Written for Python 3.9.7
+#   Written for Python 3.9.11
 #
 #   To use this module: from PyDiceroll import roll
 #
@@ -28,9 +28,9 @@ from colorama import Fore, Back, Style
 
 init() # initialize colorama
 
-__version__ = '3.4'
-__release__ = '3.4.0b'
-__py_version__ = '3.9.7'
+__version__ = '3.5'
+__release__ = '3.5.0b'
+__py_version__ = '3.9.11'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('PyDiceroll')
@@ -182,6 +182,7 @@ def roll(dice):
                   '2d4', '3d4', '4d4',
                   '2d6', '3d6', '4d6',
                   '2d8', '3d8', '4d8',
+                  '2d09', '3d09', '4d09',
                   '2d10', '3d10', '4d10',
                   '2d12', '3d12', '4d12',
                   '2d20', '3d20', '4d20', '3d6+1', '2d6-2', '2d6-7',
@@ -393,10 +394,15 @@ def roll(dice):
                 rolled = roll_1 * 10 + roll_2
                 diceroll_log.info("'%s' = %d%s+%d = %d and %d = %d" % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
-            elif dice_type == 'D09' and num_dice == 1:
-                rolled = (_dierolls(10, 1) - 1) + dice_mod
-                diceroll_log.info("'%s' = %d%s+%d = %d" % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
+            elif dice_type == 'D09':
+                roll_total = 0
+                for rolls in range(num_dice):
+                    rolled = (_dierolls(10, 1) - 1)
+                    diceroll_log.debug('Corrected to a roll of %s (because 0-9 values)' % rolled)
+                    roll_total += rolled
+                roll_total += dice_mod
+                diceroll_log.info("'%s' = %d%s+%d = %d" % (dice, num_dice, dice_type, dice_mod, roll_total))
+                return roll_total
             elif dice_type == 'D099' and num_dice == 1:
                 roll_1 = (_dierolls(10, 1) - 1) * 10
                 roll_2 = _dierolls(10, 1) - 1

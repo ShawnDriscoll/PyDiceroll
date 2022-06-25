@@ -45,6 +45,9 @@
      found running on Windows and Linux. C++ programers will never admit to using
      Python.
      
+   D10
+     Watch out for D10s. They can be numbered 1-10 or 0-9. Check first before rolling one.
+     
    D100
      A 100-sided die. A sphere, basically. Rolled with caution.
      
