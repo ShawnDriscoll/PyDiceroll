@@ -16,7 +16,7 @@ The free-to-use source is available at its `GitHub
 This documentation explains how to install and use the **PyDiceroll module** for your gaming projects.
 
 .. image:: python_v3_9_11_tag.png
-    :target: https://www.python.org/downloads/release/python-397/
+    :target: https://www.python.org/downloads/release/python-3911/
     
 .. image:: release_v3_5_0b_tag.png
 

@@ -1,5 +1,5 @@
 .. image:: docs/source/python_v3_9_11_tag.png
-    :target: https://www.python.org/downloads/release/python-395/
+    :target: https://www.python.org/downloads/release/python-3911/
     
 .. image:: docs/source/release_v3_5_0b_tag.png
     :target: https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
