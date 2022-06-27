@@ -43,11 +43,6 @@ Requirements
    
    Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
    running this module. One of the easiest to use is Microsoft Visual Studio Code.
-
-* **colorama 0.4.4**
-
-   Because CMD may have some colored text messages for debugging. The colorama
-   code can be removed if it is not needed, however. To install, just type ``pip install colorama`` at the CMD prompt.
    
 * **Your Game**
    
@@ -55,7 +50,7 @@ Requirements
    
 
 .. Warning::
-   **PyDiceroll 3.5** will not work with **Python 2.7-**.
+   **PyDiceroll 3.6** will not work with **Python 2.7-**.
 
 
 Installing Locally to Your Folder
@@ -63,7 +58,7 @@ Installing Locally to Your Folder
 
 .. figure:: python_file.png
 
-Installing **PyDiceroll 3.5** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
+Installing **PyDiceroll 3.6** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::
@@ -86,7 +81,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.5', 'roll(), release version 3.5.0b for Python 3.9.11')
+('3.6', 'roll(), release version 3.6.0b for Python 3.9.11')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',

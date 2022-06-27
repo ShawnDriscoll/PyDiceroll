@@ -23,13 +23,9 @@ from random import randint
 import os
 import logging
 import sys
-from colorama import init
-from colorama import Fore, Back, Style
 
-init() # initialize colorama
-
-__version__ = '3.5'
-__release__ = '3.5.0b'
+__version__ = '3.6'
+__release__ = '3.6.0b'
 __py_version__ = '3.9.11'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
@@ -306,8 +302,7 @@ def roll(dice):
     # check if negative number was entered
     elif dice[0] == '-':
         log.error('Negative dice count found! [ERROR]')
-        print(Fore.RED + Style.BRIGHT + 'Negative dice count found! [ERROR]')
-        print(Style.RESET_ALL)
+        print('Negative dice count found! [ERROR]')
         diceroll_log.error("Negative number of dice = '" + dice + "' [ERROR]")
         return __error__
 
@@ -424,8 +419,7 @@ def roll(dice):
     diceroll_log.error("!!!!!!!!!!!!!!!!!!!!! DICE ERROR! '" + dice + "' is unknown !!!!!!!!!!!!!!!!!!!!!!!!!")
     
     print()
-    print(Fore.RED + Style.BRIGHT + "** DICE ERROR! '%s' is unknown **" % dice)
-    print(Style.RESET_ALL)
+    print("** DICE ERROR! '%s' is unknown **" % dice)
     print("Valid dice rolls are:")
     print("roll('D6') or roll('1D6') -- roll one 6-sided die")
     print("roll('2D6') -- roll two 6-sided dice")

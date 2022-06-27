@@ -1,13 +1,19 @@
-**What's New with PyDiceroll 3.5?**
+**What's New with PyDiceroll 3.6?**
 ===================================
 
-New for PyDiceroll 3.5.0
+New in PyDiceroll 3.6.0
+------------------------
+
+PyDiceroll no longer requires **colorama**.
+
+
+New in PyDiceroll 3.5.0
 ------------------------
 
 More than one **D09** can be rolled at a time now. Added to the **MINMAXAVG** list.
 
 
-New for PyDiceroll 3.4.0
+New in PyDiceroll 3.4.0
 ------------------------
 
 The **MINMAXAVG** roll has been added. Just doing:
@@ -20,13 +26,13 @@ rolls. Mostly for testing. Nothing is returned from this roll. So print or varia
 .. figure:: minmaxavg.png
 
 
-New for PyDiceroll 3.3.1
+New in PyDiceroll 3.3.1
 ------------------------
 
 Fixed error if non-numbers are entered.
 
 
-New for PyDiceroll 3.3.0
+New in PyDiceroll 3.3.0
 ------------------------
 
 Input errors for ``roll()`` will now return a value of -9999 instead of 0.
