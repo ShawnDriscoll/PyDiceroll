@@ -9,7 +9,7 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **PyTravCalc 4.0.0**
 
-**PyImperial CharGen 1.2.0**
+**PyImperial CharGen 1.4.0**
 
 **PyQt5-Dice-App**
 
