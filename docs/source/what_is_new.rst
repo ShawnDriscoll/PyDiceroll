@@ -1,5 +1,5 @@
-**What's New with PyDiceroll 3.6?**
-===================================
+**What's New with PyDiceroll?**
+===============================
 
 New in PyDiceroll 3.6.0
 ------------------------
