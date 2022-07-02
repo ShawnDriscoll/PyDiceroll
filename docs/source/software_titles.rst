@@ -3,6 +3,8 @@
 
 Here is a sample list of software titles, at the time of this writing, using **PyDiceroll**:
 
+**Graphical Dice Roll 0.1.0**
+
 **PyTravCalc 3.5.0**
 
 **pyqtgraph_PyTravCalc 4.0.0**
@@ -17,4 +19,4 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **SectorGen 0.5.0**
 
-**TravEncounters 0.0.1**
+**TravEncounters 0.1.0**
