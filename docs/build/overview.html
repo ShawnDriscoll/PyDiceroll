@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>PyDiceroll Module &mdash; PyDiceroll 3.6 Operations Manual</title>
+  <title>Overview &mdash; PyDiceroll 3.6 Operations Manual</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Glossary" href="glossary.html" />
-    <link rel="prev" title="Designer’s Notes" href="designers_notes.html" /> 
+    <link rel="next" title="Introduction" href="introduction.html" />
+    <link rel="prev" title="PyDiceroll Manual" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,7 +94,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html"><strong>Overview</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Overview</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html"><strong>Introduction</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="what_is_new.html"><strong>What’s New with PyDiceroll?</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html"><strong>PyDiceroll Tutorial</strong></a></li>
@@ -103,7 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="alternate_distributions.html"><strong>Alternate PyDiceroll Distributions</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="software_titles.html"><strong>Software Titles That Use PyDiceroll</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="designers_notes.html"><strong>Designer’s Notes</strong></a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>PyDiceroll Module</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydiceroll.html"><strong>PyDiceroll Module</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html"><strong>Glossary</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html"><strong>Open Source</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="ffe.html"><strong>FFE Agreement</strong></a></li>
@@ -156,7 +156,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><strong>PyDiceroll Module</strong></li>
+      <li><strong>Overview</strong></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,28 +173,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pydiceroll-module">
-<h1><strong>PyDiceroll Module</strong><a class="headerlink" href="#pydiceroll-module" title="Permalink to this headline">¶</a></h1>
-<dl class="py method">
-<dt id="PyDiceroll.roll">
-<code class="sig-prename descclassname"><span class="pre">PyDiceroll.</span></code><code class="sig-name descname"><span class="pre">roll</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">str(number_of_dice)</span> <span class="pre">+</span> <span class="pre">str(dice_type)</span> <span class="pre">+</span> <span class="pre">str(dice_roll_modifier)</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyDiceroll.roll" title="Permalink to this definition">¶</a></dt>
-<dd><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">roll()</span></code> accepts a string value made up of three concatenated values, then returns an integer.</div>
-<div class="line"><br /></div>
-<div class="line">String values comes from <em>number_of_dice</em> + <em>dice_type</em> + <em>dice_roll_modifier</em></div>
-<div class="line"><br /></div>
-<div class="line">Some examples are:</div>
-<div class="line">‘2’ + ‘D10’ + ‘-2’</div>
-<div class="line">str(3) + ‘D6’ + ‘+2’</div>
-<div class="line">‘FLUX’</div>
-<div class="line"><br /></div>
-<div class="line"><em>dice_roll_modifier</em> must include a ‘+’ or ‘-‘ with its value.</div>
-<div class="line"><br /></div>
-<div class="line">Note that both <em>number_of_dice</em> and <em>dice_roll_modifier</em> are optional, and may not even be</div>
-<div class="line">used by some <em>dice_type</em> rolls.</div>
-</div>
-</dd></dl>
-
+  <div class="section" id="overview">
+<h1><strong>Overview</strong><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>This documentation explains how to install and use the <strong>PyDiceroll module</strong> for your gaming projects.</p>
+<p><strong>PyDiceroll</strong> is easy-to-use open source die rolling software. Written
+in Python 3.9 and using a variety of IDEs, <strong>PyDiceroll</strong> supports
+many gaming and RPG die rolling conventions.</p>
+<p><strong>PyDiceroll</strong> also supports logging, error reporting, and debugging
+of rolls made.</p>
+<p>The free-to-use source is available at its <a class="reference external" href="https://github.com/ShawnDriscoll/pydiceroll/">GitHub</a> repository.</p>
 </div>
 
 
@@ -203,8 +190,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="designers_notes.html" class="btn btn-neutral float-left" title="Designer’s Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="PyDiceroll Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
