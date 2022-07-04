@@ -1,6 +1,12 @@
 **What's New with PyDiceroll?**
 ===============================
 
+New in PyDiceroll 3.7.0
+------------------------
+
+**ADVANTAGE** and **DISADVANTAGE** rolls, for d20 systems, are now do-able.
+
+
 New in PyDiceroll 3.6.0
 ------------------------
 

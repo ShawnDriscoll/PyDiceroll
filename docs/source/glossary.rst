@@ -47,6 +47,9 @@
      
    D10
      Watch out for D10s. They can be numbered 1-10 or 0-9. Check first before rolling one.
+	 
+   D20
+     A much over-rated die.
      
    D100
      A 100-sided die. A sphere, basically. Rolled with caution.

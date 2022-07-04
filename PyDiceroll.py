@@ -24,8 +24,8 @@ import os
 import logging
 import sys
 
-__version__ = '3.6'
-__release__ = '3.6.0b'
+__version__ = '3.7'
+__release__ = '3.7.0b'
 __py_version__ = '3.9.11'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
@@ -85,8 +85,8 @@ def roll(dice):
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D44', 'D66', 'D88', 'DD',
-        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
-        and also Traveller5's 1D thru 10D rolls
+        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE', 'ADVANTAGE',
+        'DISADVANTAGE', and also Traveller5's 1D thru 10D rolls
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
@@ -174,7 +174,7 @@ def roll(dice):
     # was a min/max/avg asked for?
     if dice == 'MINMAXAVG':
         rolls_for_test = ['1d2', '1d3', '1d4', '1d5', '1d6', '1d8', '1d09', '1d10', '1d12', '1d20', '1d30', '1d099', '1d100',
-                  '4df', 'flux', 'goodflux', 'badflux', 'boon', 'bane',
+                  '4df', 'flux', 'goodflux', 'badflux', 'boon', 'bane', 'advantage', 'disadvantage',
                   '2d4', '3d4', '4d4',
                   '2d6', '3d6', '4d6',
                   '2d8', '3d8', '4d8',
@@ -297,6 +297,32 @@ def roll(dice):
                     die_swap = True
         rolled = die[0] + die[1]
         diceroll_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        return rolled
+
+    # check if an Advantage roll is being performed
+    elif dice == 'ADVANTAGE':
+        first_d20 = _dierolls(20, 1)
+        second_d20 = _dierolls(20, 1)
+        diceroll_log.info('Advantage roll: %d and %d' % (first_d20, second_d20))
+        if first_d20 < second_d20:
+            temp_die = first_d20
+            first_d20 = second_d20
+            second_d20 = temp_die
+        rolled = first_d20
+        diceroll_log.info('Advantage roll result: %d' % rolled)
+        return rolled
+
+    # check if a Disadvantage roll is being performed
+    elif dice == 'DISADVANTAGE':
+        first_d20 = _dierolls(20, 1)
+        second_d20 = _dierolls(20, 1)
+        diceroll_log.info('Disadvantage roll: %d and %d' % (first_d20, second_d20))
+        if first_d20 > second_d20:
+            temp_die = first_d20
+            first_d20 = second_d20
+            second_d20 = temp_die
+        rolled = first_d20
+        diceroll_log.info('Disadvantage roll result: %d' % rolled)
         return rolled
     
     # check if negative number was entered

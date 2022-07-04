@@ -12,7 +12,7 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 Your **INFO** logging will output as:
 
    | ...INFO PyDiceroll - Logging started.
-   | ...INFO PyDiceroll - roll() v3.6 started, and running...
+   | ...INFO PyDiceroll - roll() v3.7 started, and running...
    | ...INFO PyDiceroll - '3D4' = 3D4+0 = 10
 
 Changing **PyDiceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\PyDiceroll.log`` file. ::
@@ -22,7 +22,7 @@ Changing **PyDiceroll's** logging mode to ``DEBUG`` will record debugging messag
 Your **DEBUG** logging will output as:
 
    | ...INFO PyDiceroll - Logging started.
-   | ...INFO PyDiceroll - roll() v3.6 started, and running...
+   | ...INFO PyDiceroll - roll() v3.7 started, and running...
    | ...DEBUG PyDiceroll - Asked to roll '3D4':
    | ...DEBUG PyDiceroll - Using three 4-sided dice...
    | ...DEBUG PyDiceroll - Rolled a 4

@@ -42,7 +42,7 @@ Notice that the inputted string values can be upper or lower case.
 The dice types to roll are:
 
    **D2, D3, D4, D5, D6, D8, D09, D10, D12, D20, D30, D99, D100, D44, D66, D88,
-   DD, BOON, BANE, FLUX, GOODFLUX, BADFLUX**, and **4dF**.
+   DD, BOON, BANE, FLUX, GOODFLUX, BADFLUX, ADVANTAGE, DISADVANTAGE**, and **4dF**.
 
 **D09** rolls will generate a range of **0 - 9**.
 
@@ -53,6 +53,8 @@ The dice types to roll are:
 The **4dF** roll type is for FATE mechanics.
 
 Traveller5 uses **1D** thru **10D** rolls, depending on the difficulty of a task. DMs are supported.
+
+**ADVANTAGE** and **DISADVANTAGE** are dice rolls for the d20 system.
 
 
 .. note::

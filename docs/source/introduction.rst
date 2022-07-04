@@ -81,13 +81,13 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.6', 'roll(), release version 3.6.0b for Python 3.9.11')
+('3.7', 'roll(), release version 3.7.0b for Python 3.9.11')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D44', 'D66', 'D88', 'DD',
-        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
-        and also Traveller5's 1D thru 10D rolls
+        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE', 'ADVANTAGE',
+        'DISADVANTAGE', and also Traveller5's 1D thru 10D rolls
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
