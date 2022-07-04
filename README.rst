@@ -10,7 +10,6 @@ Read the **PyDiceroll Operations Manual** at http://pydiceroll.readthedocs.io
 
 Download the PDF from https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
 
-or the EPUB from https://readthedocs.org/projects/pydiceroll/downloads/epub/latest
 
 .. image:: docs/source/video.png
     :target: https://www.youtube.com/watch?v=xuyfLJbdDso

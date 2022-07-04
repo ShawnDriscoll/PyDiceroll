@@ -1,37 +1,8 @@
-.. figure:: pydiceroll_manual_cover_pdf_art.png
-
-**PyDiceroll Overview**
-=======================
-
-**PyDiceroll** is easy-to-use open source die rolling software. Written
-in Python 3.9 and using a variety of IDEs, **PyDiceroll** supports
-many gaming and RPG die rolling conventions.
-
-**PyDiceroll** also supports logging, error reporting, and debugging
-of rolls made.
-
-The free-to-use source is available at its `GitHub
-<https://github.com/ShawnDriscoll/pydiceroll/>`__ repository.
-
-This documentation explains how to install and use the **PyDiceroll module** for your gaming projects.
-
-    
-Download the `PDF
-<https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest>`__ or the `EPUB
-<https://readthedocs.org/projects/pydiceroll/downloads/epub/latest>`__ 
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/xuyfLJbdDso" frameborder="0" allowfullscreen></iframe>
-
-The Traveller game in all forms is owned by Far
-Future Enterprises. Copyright 1977 - 2022 Far Future
-Enterprises. Traveller is a registered trademark of Far
-Future Enterprises.
 
 .. toctree::
    :maxdepth: 2
 
+   overview
    introduction
    what_is_new
    tutorial
