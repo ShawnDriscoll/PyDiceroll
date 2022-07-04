@@ -13,8 +13,3 @@ of rolls made.
 The free-to-use source is available at its `GitHub
 <https://github.com/ShawnDriscoll/pydiceroll/>`__ repository.
 
-
-The Traveller game in all forms is owned by Far
-Future Enterprises. Copyright 1977 - 2022 Far Future
-Enterprises. Traveller is a registered trademark of Far
-Future Enterprises.
