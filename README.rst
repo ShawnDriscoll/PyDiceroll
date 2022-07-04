@@ -1,23 +1,10 @@
-.. image:: docs/source/python_v3_9_11_tag.png
-    :target: https://www.python.org/downloads/release/python-3911/
-    
-.. image:: docs/source/release_v3_6_0b_tag.png
-    :target: https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
-    
-.. image:: https://readthedocs.org/projects/pydiceroll/badge/?version=latest
-    :target: http://pydiceroll.readthedocs.io/en/latest/?badge=latest
-    :alt: Doc Status
-
-.. image:: https://img.shields.io/github/stars/ShawnDriscoll/pydiceroll.svg
-	:target: https://github.com/ShawnDriscoll/pydiceroll/stargazers
-
 
 .. figure:: docs/source/pydiceroll_manual_cover_pdf_art.png
 
-**PyDiceroll 3.6 for Python 3.9+**
-==================================
+**PyDiceroll for Python 3.9**
+=================================
 
-**PyDiceroll 3.6** is a Python 3.9+ module that your game code calls to make dice rolls.
+**PyDiceroll** is a Python 3.9 module that your game code calls to make dice rolls.
 
 Read the **PyDiceroll Operations Manual** at http://pydiceroll.readthedocs.io
 

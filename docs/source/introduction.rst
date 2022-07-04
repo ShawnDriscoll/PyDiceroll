@@ -34,10 +34,10 @@ Requirements
    **PyDiceroll** has been tested on Windows versions: 10.
    It has not been tested on MacOS or Linux.
    
-* **Python 3.9.11**
+* **Python 3.9**
    
    **PyDiceroll** was written using the C implementation of Python
-   version 3.9.11. Also known as CPython. With some doing, this
+   version 3.9. Also known as CPython. With some doing, this
    module could of course be re-written for Jython, PyPy, or
    IronPython.
    
@@ -50,7 +50,7 @@ Requirements
    
 
 .. Warning::
-   **PyDiceroll 3.6** will not work with **Python 2.7-**.
+   **PyDiceroll** will not work with **Python 2.7-**.
 
 
 Installing Locally to Your Folder
@@ -58,7 +58,7 @@ Installing Locally to Your Folder
 
 .. figure:: python_file.png
 
-Installing **PyDiceroll 3.6** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
+Installing **PyDiceroll** is as easy as always. Just copy ``PyDiceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::

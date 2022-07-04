@@ -3,7 +3,7 @@
 
 .. figure:: fake_die.png
 
-**PyDiceroll 3.6** keeps a log file of any dice rolls made during its last run. You will find ``PyDiceroll.log`` in the ``Logs``
+**PyDiceroll** keeps a log file of any dice rolls made during its last run. You will find ``PyDiceroll.log`` in the ``Logs``
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. **PyDiceroll** uses
 a default logging mode of ``INFO`` which isn't that verbose. ::
 
