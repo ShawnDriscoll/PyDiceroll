@@ -109,7 +109,7 @@ def roll(dice):
     An invalid roll will return a -9999 value.
     '''
 
-    log = logging.getLogger('PyTravCalc.PyDiceroll')
+    log = logging.getLogger('your_logger_function_here.PyDiceroll')
 
     # make inputted string argument upper case, and remove spaces
     dice = str(dice).upper().replace(' ','')
@@ -242,7 +242,7 @@ def roll(dice):
     dice_mod = 0
     
     # check if FLUX dice are being rolled
-    elif dice == 'FLUX':
+    if dice == 'FLUX':
         flux1 = _dierolls(6, 1)
         flux2 = _dierolls(6, 1)
         rolled = flux1 - flux2
