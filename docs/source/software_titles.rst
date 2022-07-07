@@ -3,7 +3,7 @@
 
 Here is a sample list of software titles, at the time of this writing, using **PyDiceroll**:
 
-**Graphical Dice Roll 0.2.0**
+**Graphical Dice Roll 0.3.1**
 
 **PyTravCalc 3.6.1**
 

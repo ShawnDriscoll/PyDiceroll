@@ -48,7 +48,7 @@ diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 simple_dice = ['D3', 'D4', 'D5', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
 traveller5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D']
-fate_dice = ['1DF', '2DF', '3DF', '4DF']
+fate_dice = ['1DF', '2DF', '3DF', '4DF', '5DF']
 
 __error__ = -9999
 
@@ -175,7 +175,7 @@ def roll(dice):
     # was a min/max/avg asked for?
     if dice == 'MINMAXAVG':
         rolls_for_test = ['1d2', '1d3', '1d4', '1d5', '1d6', '1d8', '1d09', '1d10', '1d12', '1d20', '1d30', '1d099', '1d100',
-                  '1df', '2df', '3df', '4df', 'flux', 'goodflux', 'badflux', 'boon', 'bane', 'advantage', 'disadvantage',
+                  '1df', '2df', '3df', '4df', '5df', 'flux', 'goodflux', 'badflux', 'boon', 'bane', 'advantage', 'disadvantage',
                   '2d4', '3d4', '4d4',
                   '2d6', '3d6', '4d6',
                   '2d8', '3d8', '4d8',
