@@ -1,26 +1,32 @@
 **What's New with PyDiceroll?**
 ===============================
 
+New in PyDiceroll 3.7.1
+-----------------------
+
+A new secret roll has been added. This is a beta test of the Fate roll type where dice mods can be added. As well as number of Fate dice to roll.
+
+
 New in PyDiceroll 3.7.0
-------------------------
+-----------------------
 
 **ADVANTAGE** and **DISADVANTAGE** rolls, for d20 systems, are now do-able.
 
 
 New in PyDiceroll 3.6.0
-------------------------
+-----------------------
 
 PyDiceroll no longer requires **colorama**.
 
 
 New in PyDiceroll 3.5.0
-------------------------
+-----------------------
 
 More than one **D09** can be rolled at a time now. Added to the **MINMAXAVG** list.
 
 
 New in PyDiceroll 3.4.0
-------------------------
+-----------------------
 
 The **MINMAXAVG** roll has been added. Just doing:
 
@@ -33,13 +39,13 @@ rolls. Mostly for testing. Nothing is returned from this roll. So print or varia
 
 
 New in PyDiceroll 3.3.1
-------------------------
+-----------------------
 
 Fixed error if non-numbers are entered.
 
 
 New in PyDiceroll 3.3.0
-------------------------
+-----------------------
 
 Input errors for ``roll()`` will now return a value of -9999 instead of 0.
 

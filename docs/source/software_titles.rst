@@ -5,7 +5,7 @@ Here is a sample list of software titles, at the time of this writing, using **P
 
 **Graphical Dice Roll 0.2.0**
 
-**PyTravCalc 3.5.0**
+**PyTravCalc 3.6.1**
 
 **pyqtgraph_PyTravCalc 4.0.0**
 
