@@ -6,7 +6,8 @@
 
 **PyDiceroll** is a Python 3.9 module that your game code calls to make dice rolls.
 
-Read the **PyDiceroll Operations Manual** at http://pydiceroll.readthedocs.io
+For instructions on installing and trying out the tutorial, read
+the **PyDiceroll Operations Manual** at http://pydiceroll.readthedocs.io
 
 Download the PDF from https://readthedocs.org/projects/pydiceroll/downloads/pdf/latest
 
