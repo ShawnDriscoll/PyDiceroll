@@ -25,7 +25,7 @@ import logging
 import sys
 
 __version__ = '3.7'
-__release__ = '3.7.1b'
+__release__ = '3.7.2b'
 __py_version__ = '3.9.11'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
@@ -102,7 +102,7 @@ def roll(dice):
     roll('4D4-4') -- add -4 DM to roll
     roll('2DD+3') -- roll (2D6+3) x 10
     roll('BOON') -- roll 3D6 and keep the higher two dice
-    roll('4dF') -- make a FATE roll
+    roll('4dF') -- make a FATE roll (-4 to 4)
     roll('4D') -- make a Traveller5 4D roll
     roll('info') -- release version of program
     
@@ -183,7 +183,7 @@ def roll(dice):
                   '2d10', '3d10', '4d10',
                   '2d12', '3d12', '4d12',
                   '2d20', '3d20', '4d20', '3d6+1', '2d6-2', '2d6-7',
-                  '1dd', '2dd', '3dd', '4dd']
+                  '1dd', '2dd', '3dd', '4dd+3']
 
         print()
         print('Using brute force...')
@@ -194,7 +194,7 @@ def roll(dice):
         for i in range(len(rolls_for_test)):
             test_roll = rolls_for_test[i]
             minimum = 100000000
-            maximum = 0
+            maximum = -100000000
             total_sum = 0
             for n in range(total_numbers):
                 die = roll(test_roll)
@@ -470,7 +470,7 @@ def roll(dice):
     print("roll('2DD+3') -- roll (2D6+3) x 10")
     print("roll('BOON') -- roll 3D6 and keep the higher two dice")
     print("roll('4D') -- make a Traveller5 4D roll")
-    print("roll('4dF') -- make a FATE roll")
+    print("roll('4dF') -- make a FATE roll (-4 to 4)")
     print()
     print("-/+ DMs can be added to rolls:")
     print("roll('3D6+6') -- add +6 DM to roll")

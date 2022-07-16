@@ -1,6 +1,12 @@
 **What's New with PyDiceroll?**
 ===============================
 
+New in PyDiceroll 3.7.2
+-----------------------
+
+**MINMAXAVG** calculates negative averages correctly now.
+
+
 New in PyDiceroll 3.7.1
 -----------------------
 

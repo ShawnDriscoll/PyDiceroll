@@ -45,6 +45,10 @@ Things To-Do
 
 **Known History**
 
+* v3.7.2b
+
+  **MINMAXAVG** calculates negative averages correctly now.
+
 * v3.7.1b
 
   A new secret roll has been added. This is a beta test of the Fate roll type where dice mods can be added.

@@ -81,7 +81,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Some ways to see if the ``PyDiceroll`` module was installed correctly is by typing:
 
 >>> print(roll('info'))
-('3.7', 'roll(), release version 3.7.1b for Python 3.9.11')
+('3.7', 'roll(), release version 3.7.2b for Python 3.9.11')
 >>> print(roll.__doc__)
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D5', 'D6', 'D8', 'D09', 'D10',
@@ -102,6 +102,6 @@ Some ways to see if the ``PyDiceroll`` module was installed correctly is by typi
     roll('2DD+3') -- roll (2D6+3) x 10
     roll('BOON') -- roll 3D6 and keep the higher two dice
     roll('4D') -- make a Traveller5 4D roll
-    roll('4dF') -- make a FATE roll
+    roll('4dF') -- make a FATE roll (-4 to 4)
     roll('info') -- release version of program
     An invalid roll will return a -9999 value.
