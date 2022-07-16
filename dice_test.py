@@ -2,7 +2,6 @@
 
 from PyDiceroll import roll
 import os
-import time
 import logging
 
 __app__ = 'dice_test'
@@ -33,10 +32,7 @@ if __name__ == '__main__':
     log.addHandler(fh)
 
     log.info('Logging started.')
-    log.info(__app__ + ' starting...')
-
-    trange = time.localtime()
 
     log.info(__app__ + ' started, and running...')
 
-print(roll('MINMAXAVG'))
+roll('MINMAXAVG')
