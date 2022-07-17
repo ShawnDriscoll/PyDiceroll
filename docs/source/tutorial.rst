@@ -50,7 +50,7 @@ The dice types to roll are:
 
 **D2** rolls will generate a range of **0 - 1**.
 
-The **4dF** roll type is for FATE mechanics.
+The **4dF** roll type is for FATE mechanics. A range of **-4 to 4** is generated.
 
 Traveller5 uses **1D** thru **10D** rolls, depending on the difficulty of a task. DMs are supported.
 

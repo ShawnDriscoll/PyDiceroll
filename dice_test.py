@@ -36,3 +36,4 @@ if __name__ == '__main__':
     log.info(__app__ + ' started, and running...')
 
 roll('MINMAXAVG')
+print(roll('2d6'))

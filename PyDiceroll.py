@@ -1,7 +1,7 @@
 #
 #   PyDiceroll.py
 #
-#   Written for Python 3.9.11
+#   Written for Python 3.9.13
 #
 #   To use this module: from PyDiceroll import roll
 #
@@ -25,8 +25,8 @@ import logging
 import sys
 
 __version__ = '3.7'
-__release__ = '3.7.2b'
-__py_version__ = '3.9.11'
+__release__ = '3.7.2'
+__py_version__ = '3.9.13'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('PyDiceroll')
