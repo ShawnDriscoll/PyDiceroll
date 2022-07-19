@@ -18,7 +18,7 @@ Download the PDF from https://readthedocs.org/projects/pydiceroll/downloads/pdf/
 Warning
 -------
 
-**PyDiceroll** will not work with **Python 2.7-**.
+**PyDiceroll** is no longer supported. Please visit the new pydice v3.8 at https://github.com/ShawnDriscoll/pydice.
 
 .. |ss| raw:: html
 
@@ -31,9 +31,7 @@ Warning
 Things To-Do
 ------------
 
-| Add more dice roll types.
-| Make it talk?
-| Cheat codes.
+| Discontinue PyDiceroll support. Project will carry over to pydice v3.8 at https://github.com/ShawnDriscoll/pydice
 |ss|
 
 | Fudge the Fate dice roll a bit.

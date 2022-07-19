@@ -277,7 +277,7 @@ def roll(dice):
         die[0] = _dierolls(6, 1)
         die[1] = _dierolls(6, 1)
         die[2] = _dierolls(6, 1)
-        diceroll_log.info('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
+        diceroll_log.debug('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
             die_swap = False
@@ -288,7 +288,7 @@ def roll(dice):
                     die[j+1] = temp_die
                     die_swap = True
         rolled = die[0] + die[1]
-        diceroll_log.info('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        diceroll_log.debug('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
     
     # check if a BANE roll is being performed
@@ -297,7 +297,7 @@ def roll(dice):
         die[0] = _dierolls(6, 1)
         die[1] = _dierolls(6, 1)
         die[2] = _dierolls(6, 1)
-        diceroll_log.info('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
+        diceroll_log.debug('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
             die_swap = False
@@ -308,14 +308,14 @@ def roll(dice):
                     die[j+1] = temp_die
                     die_swap = True
         rolled = die[0] + die[1]
-        diceroll_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        diceroll_log.debug('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
 
     # check if an Advantage roll is being performed
     elif dice == 'ADVANTAGE':
         first_d20 = _dierolls(20, 1)
         second_d20 = _dierolls(20, 1)
-        diceroll_log.info('Advantage roll: %d and %d' % (first_d20, second_d20))
+        diceroll_log.debug('Advantage roll: %d and %d' % (first_d20, second_d20))
         if first_d20 < second_d20:
             temp_die = first_d20
             first_d20 = second_d20
@@ -328,7 +328,7 @@ def roll(dice):
     elif dice == 'DISADVANTAGE':
         first_d20 = _dierolls(20, 1)
         second_d20 = _dierolls(20, 1)
-        diceroll_log.info('Disadvantage roll: %d and %d' % (first_d20, second_d20))
+        diceroll_log.debug('Disadvantage roll: %d and %d' % (first_d20, second_d20))
         if first_d20 > second_d20:
             temp_die = first_d20
             first_d20 = second_d20
@@ -526,6 +526,8 @@ if __name__ == '__main__':
                     diceroll_log.info("The direct call to PyDiceroll with '%s' resulted in %d." % (dice, num))
                 elif dice == 'INFO':
                     print('roll(), release version ' + __release__ + ' for Python ' + __py_version__)
+            else:
+                print('Typo of some sort --> ' + dice)
         else:
             dice = str(dice).upper().strip()
             num = roll(dice)
